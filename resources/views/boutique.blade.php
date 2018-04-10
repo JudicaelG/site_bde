@@ -6,7 +6,7 @@
     <title>Boutique du BDE</title>
 
     <link rel="stylesheet" type="text/css" href="../public/css/barreDeNavigation.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/fondBoutique.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/boutique.css">
 
 
 </head>
@@ -19,11 +19,10 @@
     <nav>
         <div class="element_menu">
             <ul>
-                <li><a href="welcome.blade.php"> Acceuil </a></li>
-                <li><a href="boutique.blade.php"> Boutique </a></li>
-                <li><a href="connexion.php#toregister"> Inscription </a></li>
-                <li><a href="evenement.php"> Evenements </a></li>
-                <li><a href="boite_idee.blade.php"> Boite à idées </a></li>
+                <li><a href="welcome"> Acceuil </a></li>
+                <li><a href="boutique"> Boutique </a></li>
+                <li><a href="evenement"> Evenements </a></li>
+                <li><a href="boite_idee"> Boite à idées </a></li>
             </ul>
         </div>
     </nav>
