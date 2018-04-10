@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #ff3a35;
+    min-height: 400px;
+    /*height: 100vh;*/
+}
+
+h1{
+    color: white;
+    font-family: helvetica;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 0.9;
+}
+
+#corps{
+    height: 800px;
+
+}
+
+.element_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.element_menu li {
+    display: inline;
+    float: left;
+}
+
+.element_menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#evenement{
+    height: 500px;
+}
+
+.future{
+    margin: 20px 0 10px 20px;
+    height: 40px;
+    width: 66%;
+}
+.passer{
+    margin: 20px 0 10px 20px;
+    height: 40px;
+    width: 66%;
+}
+
+.boite_idee{
+    float: right;
+    border: solid;
+    border-radius: 12px;
+    height: 100px;
+    width: 30%;
+    margin-left: 10px;
+}
+
+#filtre{
+    padding: 10px;
+    border: solid;
+    width: 13%;
+    position: fixed;
+    z-index: 1;
+    top: 450px;
+}
+
+#filtre li{
+    margin: 7px 0 0px 5px;
+}
+
+#produits{
+    height: 200px;
+}
+
+#footer{
+    height: 100px;
+    background-color: grey;
+    opacity: 0.7;
+}
+
+.localisation{
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.copy{
+    float: right;
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+}
