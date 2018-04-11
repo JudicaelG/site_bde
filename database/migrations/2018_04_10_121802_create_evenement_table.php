@@ -14,7 +14,8 @@ class CreateEvenementTable extends Migration
     public function up()
     {
         Schema::create('evenement', function (Blueprint $table) {
-            $table->increments('id_evenement');
+			$table->engine = 'InnoDB';
+            $table->integer('id_evenement')->autoIncrement();
 			$table->string('titre', 50);
 			$table->text('description');
 			$table->date('date_evenement');

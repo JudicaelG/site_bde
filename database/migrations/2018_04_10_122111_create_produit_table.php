@@ -14,7 +14,8 @@ class CreateProduitTable extends Migration
     public function up()
     {
         Schema::create('produit', function (Blueprint $table) {
-            $table->increments('id_produit');
+			$table->engine = 'InnoDB';
+            $table->integer('id_produit')->autoIncrement();
             $table->string('titre', 25);
             $table->text('description');
             $table->float('prix');

@@ -14,7 +14,8 @@ class CreateCommandeTable extends Migration
     public function up()
     {
         Schema::create('commande', function (Blueprint $table) {
-            $table->increments('id_commande');
+			$table->engine = 'InnoDB';
+            $table->integer('id_commande')->autoIncrement();
             $table->float('prix_total');
             $table->date('date_commande');
             $table->integer('id_utilisateur');

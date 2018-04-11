@@ -14,6 +14,7 @@ class CreateContientProduitTable extends Migration
     public function up()
     {
         Schema::create('contient_produit', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->integer('quantite');
             $table->integer('id_produit')->primary;
             $table->integer('id_commande')->primary;

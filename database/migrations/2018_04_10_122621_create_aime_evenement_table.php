@@ -14,6 +14,7 @@ class CreateAimeEvenementTable extends Migration
     public function up()
     {
         Schema::create('aime_evenement', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->integer('id_evenement')->primary;
             $table->integer('id_utilisateur')->primary;
             $table->timestamps();

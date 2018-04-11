@@ -14,7 +14,8 @@ class CreateBoiteIdeeTable extends Migration
     public function up()
     {
         Schema::create('boite_idee', function (Blueprint $table) {
-            $table->increments('id_boite_idee');
+			$table->engine = 'InnoDB';
+            $table->integer('id_boite_idee')->autoIncrement();
             $table->string('titre', 25);
             $table->text('description');
             $table->date('date_idee');

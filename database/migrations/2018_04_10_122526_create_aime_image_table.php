@@ -14,6 +14,7 @@ class CreateAimeImageTable extends Migration
     public function up()
     {
         Schema::create('aime_image', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->integer('id_image')->primary;
             $table->integer('id_utilisateur')->primary;
             $table->timestamps();

@@ -14,6 +14,7 @@ class CreateParticipeTable extends Migration
     public function up()
     {
         Schema::create('participe', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->integer('id_evenement')->primary;
             $table->integer('id_utilisateur')->primary;
             $table->timestamps();
