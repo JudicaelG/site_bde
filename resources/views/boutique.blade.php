@@ -6,12 +6,9 @@
     <title>Boutique du BDE</title>
 
     <link rel="stylesheet" type="text/css" href="../public/css/barreDeNavigation.css">
-<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="../public/css/boutique.css">
-=======
-    <link rel="stylesheet" type="text/css" href="../public/css/fondBoutique.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/styleAcceuil.css">
->>>>>>> Ajout de la page d'acceuil, du menu et du footer. Ainsi que la route pour y acceder
+    <link rel="stylesheet" type="text/css" href="../public/css/styleAccueil.css">
+
 
 
 </head>
