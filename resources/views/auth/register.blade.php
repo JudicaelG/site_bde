@@ -12,20 +12,6 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Prénom') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="prenom" type="text" class="form-control{{ $errors->has('prenom') ? ' is-invalid' : '' }}" name="prenom" value="{{ old('prenom') }}" required autofocus>
-
-                                @if ($errors->has('prenom'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('prenom') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                        </div>
-                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
 
                             <div class="col-md-6">
@@ -34,6 +20,20 @@
                                 @if ($errors->has('nom'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('nom') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Prénom') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="prenom" type="text" class="form-control{{ $errors->has('prenom') ? ' is-invalid' : '' }}" name="prenom" value="{{ old('prenom') }}" required autofocus>
+
+                                @if ($errors->has('prenom'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('prenom') }}</strong>
                                     </span>
                                 @endif
                             </div>
