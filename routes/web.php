@@ -14,8 +14,9 @@
 Route::get('/', 'AccueilController@index');
 Route::get('/accueil', 'AccueilController@index');
 Route::get('/boutique', 'BoutiqueController@index');
-Route::get('/evenement', 'EvenementController@index');
-Route::get('/boiteAidee', 'BoiteAideeController@index');
+
+Route::resource('evenement','EvenementController');
+Route::resource('boiteidee','BoiteideeController');
 
 Auth::routes();
 

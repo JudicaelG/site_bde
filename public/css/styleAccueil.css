@@ -129,11 +129,11 @@ h1{
 
 #ajout_idee{
     background-color: grey;
-    padding: 20px;
+    padding: 10px;
 }
 input[type=text], textarea {
     width: 100%;
-    padding: 12px;
+
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;

@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Le site du bde</title>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="../public/css/styleAccueil.css" rel="stylesheet">
-    <link href="../public/css/boutique.css" rel="stylesheet">
+
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/styleAccueil.css')}}" rel="stylesheet">
+    <link href="{{asset('css/boutique.css')}}" rel="stylesheet">
+
+
 
 </head>
 <body>
