@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="../public/css/barreDeNavigation.css">
     <link rel="stylesheet" type="text/css" href="../public/css/boutique.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/styleAccueil.css">
+
 
 
 </head>
@@ -36,8 +38,6 @@
         </div>
     </div>
 
-    <footer>
-        Footer
-    </footer>
+    @include('footer')
 </body>
 </html>

@@ -6,11 +6,11 @@
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../public/css/styleAccueil.css">
+<link rel="stylesheet" type="text/css" href="../public/css/styleAccueil.css">
 <body>
 
 <header>
-    <h1>Bienvenue sur le site du BDE</h1>
+    <h1>Evenements du BDE</h1>
 </header>
 
 <div id="corps">
@@ -25,10 +25,6 @@
         <div class="passer">
             <h3>Evénements passé:</h3>
             <?php //include("displayEventPasser"); ?>
-        </div>
-        <div class="boite_idee">
-            <h3>Boite à idée:</h3>
-            <?php //include("displayIdee"); ?>
         </div>
     </div>
 
