@@ -12,56 +12,56 @@ class AimeIdeeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '1',
                 'id_boite_idee' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '1',
                 'id_boite_idee' => '3',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '2',
                 'id_boite_idee' => '2',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '2',
                 'id_boite_idee' => '3',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '5',
                 'id_boite_idee' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '6',
                 'id_boite_idee' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '7',
                 'id_boite_idee' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('nomdelatable')->insert(
+        DB::table('aime_idee')->insert(
             [
                 'id_utilisateur' => '7',
                 'id_boite_idee' => '3',
