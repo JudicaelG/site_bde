@@ -15,12 +15,17 @@
             <li class="nav-item active">
                 <a class="nav-link" href="boiteAidee">Boite a idee <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="login">Connexion <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="register">Inscription <span class="sr-only">(current)</span></a>
-            </li>
+			@if (Auth::check())
+				<li><a href="{{ route('login') }}">Se connecter <span class="sr-only">(current)</span></a></li>
+				<li><a href="{{ route('register') }}">S'inscrire <span class="sr-only">(current)</span></a></li>
+			@else
+				{{ csrf_field() }}
+				<li><a href="{{ route('logout') }}">Déconnexion</a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
+                {{ csrf_field() }}
+                </form>
+				</li>
+			@endif
         </ul>
         <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Search">
