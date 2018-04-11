@@ -17,14 +17,14 @@ class DatabaseSeeder extends Seeder
         $this->call(AimeIdeeTableSeeder::class);
         $this->call(CategorieProduitTableSeeder::class);
         $this->call(ProduitTableSeeder::class);
-
         $this->call(EvenementTableSeeder::class);
+        $this->call(ImageTableSeeder::class);
+        $this->call(CommentaireTableSeeder::class);
+        $this->call(ParticipeTableSeeder::class);
+
+        /*$this->call(UsersTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
+        $this->call(UsersTableSeeder::class);*/
     }
 }

@@ -16,7 +16,7 @@ class ProduitTableSeeder extends Seeder
             [
                 'titre' => 'Polo BDE',
                 'description' => 'Polo avec le logo du BDE Exia',
-                'prix' => '12,50',
+                'prix' => '12.50',
                 'id_categorie' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -25,7 +25,7 @@ class ProduitTableSeeder extends Seeder
             [
                 'titre' => 'Casquette',
                 'description' => 'Casquette avec le logo du BDE Exia',
-                'prix' => '7,50',
+                'prix' => '7.50',
                 'id_categorie' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -34,7 +34,7 @@ class ProduitTableSeeder extends Seeder
             [
                 'titre' => 'Mug',
                 'description' => 'Mug avec le logo du BDE Exia',
-                'prix' => '10,50',
+                'prix' => '10.50',
                 'id_categorie' => '2',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

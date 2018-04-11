@@ -18,6 +18,7 @@ class CreateCommandeTable extends Migration
             $table->integer('id_commande')->autoIncrement();
             $table->float('prix_total');
             $table->date('date_commande');
+            $table->string('etat_commande',25);
             $table->integer('id_utilisateur');
             $table->timestamps();
 			

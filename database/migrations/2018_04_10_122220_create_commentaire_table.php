@@ -17,9 +17,9 @@ class CreateCommentaireTable extends Migration
 			$table->engine = 'InnoDB';
             $table->integer('id_commentaire')->autoIncrement();
             $table->text('contenu');
-            $table->integer('id_evenement');
+            $table->integer('id_evenement')->nullable();
             $table->integer('id_utilisateur');
-            $table->integer('id_image');
+            $table->integer('id_image')->nullable();
             $table->timestamps();
 			
 			$table->foreign('id_evenement')->references('id_evenement')->on('evenement')->onDelete('cascade');

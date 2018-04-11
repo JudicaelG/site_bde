@@ -18,8 +18,8 @@ class CreateImageTable extends Migration
             $table->integer('id_image')->autoIncrement();
             $table->text('lien');
             $table->string('alt', 25);
-            $table->integer('id_evenement');
-            $table->integer('id_produit');
+            $table->integer('id_evenement')->nullable();
+            $table->integer('id_produit')->nullable();
             $table->integer('id_utilisateur');
             $table->timestamps();
 			
