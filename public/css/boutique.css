@@ -1,18 +1,16 @@
-body{
-    background: darkmagenta;
-}
 
 #fondBoutique{
-    background: red;
+    background: #ff3a35;
+    min-height: 400px;
     width: 100%;
 }
 
 #titreFondBoutique{
-    text-align: center;
     color: white;
-    font-size: 7vw;
-    padding-top: 15vh;
-    height: 45vh;
+    font-family: helvetica;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 0.9;
 }
 
 #meilleuresVentes{

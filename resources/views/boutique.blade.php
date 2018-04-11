@@ -15,7 +15,7 @@
 <body>
 
     <div id="fondBoutique">
-        <p id="titreFondBoutique">Boutique BDE</p>
+        <h1 id="titreFondBoutique">Boutique BDE</h1>
     </div>
 
     @include('menu')
