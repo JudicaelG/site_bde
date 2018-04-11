@@ -11,7 +11,7 @@ class ImageTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('evenement')->insert(
+        DB::table('image')->insert(
             [
                 'lien' => 'C:/dossier_bde/image/crepes.jpeg',
                 'alt' => 'autre chemin',
@@ -20,7 +20,7 @@ class ImageTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('image')->insert(
             [
                 'lien' => 'C:/dossier_bde/image/crepelololol.jpeg',
                 'alt' => 'autre chemin',
@@ -29,7 +29,7 @@ class ImageTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('image')->insert(
             [
                 'lien' => 'C:/dossier_bde/image/casquette.jpeg',
                 'alt' => 'autre chemin',
@@ -38,7 +38,7 @@ class ImageTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('image')->insert(
             [
                 'lien' => 'C:/dossier_bde/image/tacos_cest_bon.jpeg',
                 'alt' => 'autre chemin',
