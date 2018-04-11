@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatutTable extends Migration
+class CreateCategorieProduitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateStatutTable extends Migration
      */
     public function up()
     {
-        Schema::create('statut', function (Blueprint $table) {
+        Schema::create('categorie_produits', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_statut')->autoIncrement();
-			$table->string('statut');
+            $table->integer('id_categorie')->autoIncrement();
+            $table->string('nom', 25);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateStatutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statut');
+        Schema::dropIfExists('categorie_produits');
     }
 }

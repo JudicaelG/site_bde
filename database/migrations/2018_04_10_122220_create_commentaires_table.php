@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommentaireTable extends Migration
+class CreateCommentairesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCommentaireTable extends Migration
      */
     public function up()
     {
-        Schema::create('commentaire', function (Blueprint $table) {
+        Schema::create('commentaires', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
             $table->integer('id_commentaire')->autoIncrement();
             $table->text('contenu');
@@ -22,9 +22,9 @@ class CreateCommentaireTable extends Migration
             $table->integer('id_image')->nullable();
             $table->timestamps();
 			
-			$table->foreign('id_evenement')->references('id_evenement')->on('evenement')->onDelete('cascade');
-			$table->foreign('id_utilisateur')->references('id_utilisateur')->on('users')->onDelete('cascade');
-			$table->foreign('id_image')->references('id_image')->on('image')->onDelete('cascade');
+			$table->foreign('id_evenement')->references('id_evenement')->on('evenements')->onDelete('cascade');
+			$table->foreign('id_utilisateur')->references('id_utilisateurs')->on('users')->onDelete('cascade');
+			$table->foreign('id_image')->references('id_image')->on('images')->onDelete('cascade');
         });
     }
 
@@ -35,6 +35,6 @@ class CreateCommentaireTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commentaire');
+        Schema::dropIfExists('commentaires');
     }
 }

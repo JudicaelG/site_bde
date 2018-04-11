@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContientProduitTable extends Migration
+class CreateAimeImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateContientProduitTable extends Migration
      */
     public function up()
     {
-        Schema::create('contient_produit', function (Blueprint $table) {
+        Schema::create('aime_images', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('quantite');
-            $table->integer('id_produit')->primary;
-            $table->integer('id_commande')->primary;
+            $table->integer('id_image')->primary;
+            $table->integer('id_utilisateur')->primary;
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateContientProduitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contient_produit');
+        Schema::dropIfExists('aime_images');
     }
 }

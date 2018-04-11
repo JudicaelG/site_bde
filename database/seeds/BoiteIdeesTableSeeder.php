@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class BoiteIdeeTableSeeder extends Seeder
+class BoiteIdeesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class BoiteIdeeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('boite_idee')->insert(
+        DB::table('boite_idees')->insert(
             [
                 'titre' => 'After Work',
                 'description' => 'Proposition d\'une soirée en semaine, aller au bar et participer au rapprochement inter-promotion',
@@ -21,7 +21,7 @@ class BoiteIdeeTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('boite_idee')->insert(
+        DB::table('boite_idees')->insert(
             [
                 'titre' => 'Chasse aux oeufs',
                 'description' => 'Proposition d\'une chasse aux oeufs pour la semaine de Paques',
@@ -30,7 +30,7 @@ class BoiteIdeeTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('boite_idee')->insert(
+        DB::table('boite_idees')->insert(
             [
                 'titre' => 'Nouveaux produits ',
                 'description' => 'Demande d\'ajout de nouveaux produits sur le site, comme des t-shirts avec plusieurs autres couleurs' ,

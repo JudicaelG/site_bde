@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBoiteIdeeTable extends Migration
+class CreateCommandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateBoiteIdeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('boite_idee', function (Blueprint $table) {
+        Schema::create('commandes', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_boite_idee')->autoIncrement();
-            $table->string('titre', 25);
-            $table->text('description');
-            $table->date('date_idee');
+            $table->integer('id_commande')->autoIncrement();
+            $table->float('prix_total');
+            $table->date('date_commande');
+            $table->string('etat_commande',25);
             $table->integer('id_utilisateur');
             $table->timestamps();
 			
@@ -33,6 +33,6 @@ class CreateBoiteIdeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boite_idee');
+        Schema::dropIfExists('commandes');
     }
 }

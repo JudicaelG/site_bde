@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class CategorieProduitTableSeeder extends Seeder
+class CategorieProduitsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,13 +12,13 @@ class CategorieProduitTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categorie_produit')->insert(
+        DB::table('categorie_produits')->insert(
             [
                 'nom' => 'Vêtement',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('categorie_produit')->insert(
+        DB::table('categorie_produits')->insert(
             [
                 'nom' => 'Goodies',
                 'created_at' => Carbon::now(),

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommandeTable extends Migration
+class CreateEvenementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateCommandeTable extends Migration
      */
     public function up()
     {
-        Schema::create('commande', function (Blueprint $table) {
+        Schema::create('evenements', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_commande')->autoIncrement();
-            $table->float('prix_total');
-            $table->date('date_commande');
-            $table->string('etat_commande',25);
-            $table->integer('id_utilisateur');
+            $table->integer('id_evenement')->autoIncrement();
+			$table->string('titre', 50);
+			$table->text('description');
+			$table->date('date_evenement');
+			$table->float('prix');
+			$table->string('recurrence', 50);
+			$table->integer('id_utilisateur');
             $table->timestamps();
 			
 			$table->foreign('id_utilisateur')->references('id_utilisateur')->on('users')->onDelete('cascade');
@@ -33,6 +35,6 @@ class CreateCommandeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commande');
+        Schema::dropIfExists('evenements');
     }
 }

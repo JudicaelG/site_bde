@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class EvenementTableSeeder extends Seeder
+class EvenementsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class EvenementTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('evenement')->insert(
+        DB::table('evenements')->insert(
             [
                 'titre' => 'Don du sang',
                 'description' => 'Les intervants de l\'Etablissement Français du Sang viendront à l\'Exia pour une collecte sur le campus',
@@ -23,7 +23,7 @@ class EvenementTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('evenements')->insert(
             [
                 'titre' => 'Distribution Maneuleuh',
                 'description' => 'Une distribuation de Maneuleuh a eu lieu comme chaque année',
@@ -34,7 +34,7 @@ class EvenementTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('evenements')->insert(
             [
                 'titre' => 'Chandeleur',
                 'description' => 'Une vente de crèpes à l\'unité a eu lieu pour la chandeleur',
@@ -45,7 +45,7 @@ class EvenementTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('evenements')->insert(
             [
                 'titre' => 'Tacos',
                 'description' => 'Une vente de Tacos a lieu comme chaque semaine par En`\'K',
@@ -56,7 +56,7 @@ class EvenementTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('evenement')->insert(
+        DB::table('evenements')->insert(
             [
                 'titre' => 'Pizza',
                 'description' => 'Une vente de Pizza a lieu comme chaque semaine par En`\'K',

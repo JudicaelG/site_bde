@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class StatutTableSeeder extends Seeder
+class StatutsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,20 +13,20 @@ class StatutTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('statut')->insert(
+        DB::table('statuts')->insert(
 		[
 			'statut' => 'Etudiant',
 			'created_at' => Carbon::now(),
 			'updated_at' => Carbon::now(),
 		]);
 		
-		DB::table('statut')->insert(
+		DB::table('statuts')->insert(
 		[
 			'statut' => 'Salarie',
 			'created_at' => Carbon::now(),
 			'updated_at' => Carbon::now(),
 		]);
-		DB::table('statut')->insert(
+		DB::table('statuts')->insert(
 		[
 			'statut' => 'BDE',
 			'created_at' => Carbon::now(),

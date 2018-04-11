@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAimeEvenementTable extends Migration
+class CreateAimeEvenementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAimeEvenementTable extends Migration
      */
     public function up()
     {
-        Schema::create('aime_evenement', function (Blueprint $table) {
+        Schema::create('aime_evenements', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
             $table->integer('id_evenement')->primary;
             $table->integer('id_utilisateur')->primary;
@@ -28,6 +28,6 @@ class CreateAimeEvenementTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aime_evenement');
+        Schema::dropIfExists('aime_evenements');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class CommentaireTableSeeder extends Seeder
+class AimeEvenementsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,35 +12,38 @@ class CommentaireTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('commentaire')->insert(
+        DB::table('aime_evenements')->insert(
             [
-                'contenu' => 'Aha, une journée mémorable',
-                'id_utilisateur' => '3',
                 'id_evenement' => '1',
+                'id_utilisateur' => '4',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('commentaire')->insert(
+        DB::table('aime_evenements')->insert(
             [
-                'contenu' => 'Encore merci à eux!!',
-                'id_utilisateur' => '4',
-                'id_evenement' => '1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ]);
-        DB::table('commentaire')->insert(
-            [
-                'contenu' => 'Vous dites Manele ou Menele vous??',
-                'id_utilisateur' => '4',
                 'id_evenement' => '2',
+                'id_utilisateur' => '4',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('commentaire')->insert(
+        DB::table('aime_evenements')->insert(
             [
-                'contenu' => 'Toujours aussi bonnes, merci En\'K',
-                'id_utilisateur' => '1',
-                'id_image' => '2',
+                'id_evenement' => '2',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('aime_evenements')->insert(
+            [
+                'id_evenement' => '2',
+                'id_utilisateur' => '3',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('aime_evenements')->insert(
+            [
+                'id_evenement' => '3',
+                'id_utilisateur' => '6',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

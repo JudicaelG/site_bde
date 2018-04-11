@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateParticipeTable extends Migration
+class CreateContientProduitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateParticipeTable extends Migration
      */
     public function up()
     {
-        Schema::create('participe', function (Blueprint $table) {
+        Schema::create('contient_produits', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_evenement')->primary;
-            $table->integer('id_utilisateur')->primary;
+            $table->integer('quantite');
+            $table->integer('id_produit')->primary;
+            $table->integer('id_commande')->primary;
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateParticipeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('participe');
+        Schema::dropIfExists('contient_produits');
     }
 }

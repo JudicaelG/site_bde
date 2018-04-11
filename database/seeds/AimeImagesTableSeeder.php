@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class ParticipeTableSeeder extends Seeder
+class AimeImagesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,45 +12,52 @@ class ParticipeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('participe')->insert(
+        DB::table('aime_images')->insert(
             [
-                'id_evenement' => '1',
+                'id_image' => '1',
                 'id_utilisateur' => '1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('participe')->insert(
+        DB::table('aime_images')->insert(
             [
-                'id_evenement' => '1',
-                'id_utilisateur' => '2',
+                'id_image' => '1',
+                'id_utilisateur' => '3',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('participe')->insert(
+        DB::table('aime_images')->insert(
             [
-                'id_evenement' => '2',
-                'id_utilisateur' => '2',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ]);
-        DB::table('participe')->insert(
-            [
-                'id_evenement' => '2',
+                'id_image' => '1',
                 'id_utilisateur' => '4',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('participe')->insert(
+        DB::table('aime_images')->insert(
             [
-                'id_evenement' => '4',
+                'id_image' => '1',
+                'id_utilisateur' => '7',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('aime_images')->insert(
+            [
+                'id_image' => '2',
                 'id_utilisateur' => '5',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-        DB::table('participe')->insert(
+        DB::table('aime_images')->insert(
             [
-                'id_evenement' => '3',
-                'id_utilisateur' => '4',
+                'id_image' => '4',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('aime_images')->insert(
+            [
+                'id_image' => '4',
+                'id_utilisateur' => '7',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategorieProduitTable extends Migration
+class CreateParticipesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCategorieProduitTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorie_produit', function (Blueprint $table) {
+        Schema::create('participes', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_categorie')->autoIncrement();
-            $table->string('nom', 25);
+            $table->integer('id_evenement')->primary;
+            $table->integer('id_utilisateur')->primary;
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateCategorieProduitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorie_produit');
+        Schema::dropIfExists('participes');
     }
 }

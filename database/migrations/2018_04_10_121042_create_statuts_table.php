@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAimeImageTable extends Migration
+class CreateStatutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateAimeImageTable extends Migration
      */
     public function up()
     {
-        Schema::create('aime_image', function (Blueprint $table) {
+        Schema::create('statuts', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_image')->primary;
-            $table->integer('id_utilisateur')->primary;
+            $table->integer('id_statut')->autoIncrement();
+			$table->string('statut');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateAimeImageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aime_image');
+        Schema::dropIfExists('statuts');
     }
 }
