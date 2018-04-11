@@ -11,7 +11,7 @@ header{
 }
 
 h1{
-    color: white;
+    color: black;
     font-family: helvetica;
     text-align: center;
     padding-top: 100px;
@@ -103,4 +103,41 @@ h1{
     text-align: center;
     width: 50%;
     margin-top: 20px;
+}
+
+
+#ajout_idee h3{
+    text-align: center;
+}
+
+#encre_idee a {
+    text-decoration: none;
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    z-index: 1;
+}
+
+#encre_idee a:hover {
+    opacity: 0.8;
+}
+
+#ajout_idee{
+    background-color: grey;
+    padding: 20px;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
