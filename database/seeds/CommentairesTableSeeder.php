@@ -30,7 +30,7 @@ class CommentairesTableSeeder extends Seeder
             ]);
         DB::table('commentaires')->insert(
             [
-                'contenu' => 'Vous dites Manele ou Menele vous??',
+                'contenu' => 'Vous dites Manala ou Menele vous??',
                 'id_utilisateur' => '4',
                 'id_evenement' => '2',
                 'created_at' => Carbon::now(),

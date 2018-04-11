@@ -26,7 +26,7 @@ class EvenementsTableSeeder extends Seeder
         DB::table('evenements')->insert(
             [
                 'titre' => 'Distribution Maneuleuh',
-                'description' => 'Une distribuation de Maneuleuh a eu lieu comme chaque année',
+                'description' => 'Une distribution de Maneuleuh a eu lieu comme chaque année',
                 'date_evenement' => '2017-12-05',
                 'prix' => '0',
                 'recurrence' => 'Annuuellement',
