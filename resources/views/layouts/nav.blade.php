@@ -15,20 +15,30 @@
             <li class="nav-item active">
                 <a class="nav-link" href="boiteAidee">Boite a idee <span class="sr-only">(current)</span></a>
             </li>
-			@if (Auth::check())
-				<li><a href="{{ route('login') }}">Se connecter <span class="sr-only">(current)</span></a></li>
-				<li><a href="{{ route('register') }}">S'inscrire <span class="sr-only">(current)</span></a></li>
+			@guest
+				<li "nav-item active"><a class="nav-link" href="{{ route('login') }}">Se connecter <span class="sr-only">(current)</span></a></li>
+				<li "nav-item active"><a class="nav-link" href="{{ route('register') }}">S'inscrire <span class="sr-only">(current)</span></a></li>
 			@else
-				{{ csrf_field() }}
-				<li><a href="{{ route('logout') }}">Déconnexion</a>
-				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
-                {{ csrf_field() }}
-                </form>
-				</li>
-			@endif
+				<li "nav-item active"><a id="logout" class="nav-link" href="{{ route('logout') }}">Déconnexion</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
+                            {{ csrf_field() }}
+                        </form>
+                </li>
+			@endguest
         </ul>
         <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Search">
         </form>
     </div>
 </nav>
+
+<script src="{{ asset('js/app.js') }}"></script>
+
+    <script>
+        $(function() {
+            $('#logout').click(function(e) {
+                e.preventDefault();
+                $('#logout-form').submit()
+            })
+        })
+    </script>
