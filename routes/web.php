@@ -17,9 +17,6 @@ Route::get('/boutique', 'BoutiqueController@index');
 Route::get('/evenement', 'EvenementController@index');
 Route::get('/boiteAidee', 'BoiteAideeController@index');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-

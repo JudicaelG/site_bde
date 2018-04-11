@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_utilisateur')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->string('nom_de_famille');
             $table->string('prenom');
             $table->string('email')->unique();
@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 			
-			$table->foreign('id_statut')->references('id_statut')->on('statut')->onDelete('cascade');
+			$table->foreign('id_statut')->references('id_statut')->on('statuts')->onDelete('cascade');
         });
     }
 
