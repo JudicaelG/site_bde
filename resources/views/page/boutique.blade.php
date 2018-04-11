@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+@extends('layouts.master')
 
-    <title>Boutique du BDE</title>
+@section ('header')
 
-    <link rel="stylesheet" type="text/css" href="../public/css/barreDeNavigation.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/boutique.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/styleAccueil.css">
+    <header>
+        <h1>Boutique BDE</h1>
+    </header>
 
+@endsection
 
-
-</head>
-<body>
-
-    <div id="fondBoutique">
-        <h1 id="titreFondBoutique">Boutique BDE</h1>
-    </div>
-
-    @include('menu')
+@section ('content')
 
     <div id="meilleuresVentes">
         <p>Meilleures Ventes</p>
@@ -38,6 +28,4 @@
         </div>
     </div>
 
-    @include('footer')
-</body>
-</html>
+@endsection

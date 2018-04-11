@@ -11,18 +11,13 @@
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::get('/', 'AccueilController@index');
+Route::get('/accueil', 'AccueilController@index');
+Route::get('/boutique', 'BoutiqueController@index');
+Route::get('/evenement', 'EvenementController@index');
+Route::get('/boiteAidee', 'BoiteAideeController@index');
 
-Route::get('/boutique', function () {
-    return view('boutique');
-});
 
-Route::get('/evenement', function () {
-    return view('evenement');
-
-});
 
 Auth::routes();
 
