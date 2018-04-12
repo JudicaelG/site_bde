@@ -17,33 +17,9 @@ h1{
     padding-top: 100px;
     opacity: 0.9;
 }
-
-#corps{
-    height: 800px;
-
-}
-
-.element_menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.element_menu li {
-    display: inline;
-    float: left;
-}
-
-.element_menu a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
+/*
+a enlerver apres
+ */
 #evenement{
     height: 500px;
 }
@@ -67,77 +43,12 @@ h1{
     width: 30%;
     margin-left: 10px;
 }
-
-#filtre{
-    padding: 10px;
-    border: solid;
-    width: 13%;
-    position: fixed;
-    z-index: 1;
-    top: 450px;
+nav ul a{
+    margin-top: 5px;
 }
 
-#filtre li{
-    margin: 7px 0 0px 5px;
-}
-
-#produits{
-    height: 200px;
-}
-
-#footer{
-    height: 100px;
-    background-color: grey;
-    opacity: 0.7;
-}
-
-.localisation{
-    float: left;
-    width: 50%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.copy{
-    float: right;
-    text-align: center;
-    width: 50%;
-    margin-top: 20px;
-}
-
-
-#ajout_idee h3{
-    text-align: center;
-}
-
-#encre_idee a {
-    text-decoration: none;
-    display: block;
-    background-color: red;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 150px;
-    z-index: 1;
-}
-
-#encre_idee a:hover {
-    opacity: 0.8;
-}
-
-#ajout_idee{
-    background-color: grey;
-    padding: 10px;
-}
-input[type=text], textarea {
-    width: 100%;
-
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+@media screen and (max-width: 767px) {
+    nav ul a{
+        margin-top: 0px;
+    }
 }

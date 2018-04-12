@@ -10,6 +10,8 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/styleAccueil.css')}}" rel="stylesheet">
     <link href="{{asset('css/boutique.css')}}" rel="stylesheet">
+    <link href="{{asset('css/styleFooter.css')}}" rel="stylesheet">
+    <link href="{{asset('css/styleBoiteAIdee.css')}}" rel="stylesheet">
 
 
 

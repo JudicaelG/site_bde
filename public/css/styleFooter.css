@@ -1,0 +1,20 @@
+
+#footer{
+    height: 100px;
+    background-color: grey;
+    opacity: 0.7;
+}
+
+.localisation{
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.copy{
+    float: right;
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+}
