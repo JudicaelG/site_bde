@@ -15,7 +15,7 @@ class CreateCategorieProduitsTable extends Migration
     {
         Schema::create('categorie_produits', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_categorie')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->string('nom', 25);
             $table->timestamps();
         });

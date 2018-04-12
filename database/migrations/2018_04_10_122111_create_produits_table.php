@@ -15,14 +15,14 @@ class CreateProduitsTable extends Migration
     {
         Schema::create('produits', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_produit')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->string('titre', 25);
             $table->text('description');
             $table->float('prix');
             $table->integer('id_categorie');
             $table->timestamps();
 			
-			$table->foreign('id_categorie')->references('id_categorie')->on('categorie_produits')->onDelete('cascade');;
+			$table->foreign('id_categorie')->references('id')->on('categorie_produits')->onDelete('cascade');;
         });
     }
 

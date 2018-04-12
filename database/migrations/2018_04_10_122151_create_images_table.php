@@ -15,7 +15,7 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_image')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->text('lien');
             $table->string('alt', 25);
             $table->integer('id_evenement')->nullable();
@@ -24,8 +24,8 @@ class CreateImagesTable extends Migration
             $table->timestamps();
 			
 			$table->foreign('id_utilisateur')->references('id')->on('users')->onDelete('cascade');
-			$table->foreign('id_produit')->references('id_produit')->on('produits')->onDelete('cascade');
-			$table->foreign('id_evenement')->references('id_evenement')->on('evenements')->onDelete('cascade');
+			$table->foreign('id_produit')->references('id')->on('produits')->onDelete('cascade');
+			$table->foreign('id_evenement')->references('id')->on('evenements')->onDelete('cascade');
         });
     }
 

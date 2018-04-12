@@ -15,7 +15,7 @@ class CreateBoiteIdeesTable extends Migration
     {
         Schema::create('boite_idees', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_boite_idee')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->string('titre', 25);
             $table->text('description');
             $table->date('date_idee');

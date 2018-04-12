@@ -15,16 +15,16 @@ class CreateCommentairesTable extends Migration
     {
         Schema::create('commentaires', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-            $table->integer('id_commentaire')->autoIncrement();
+            $table->integer('id')->autoIncrement();
             $table->text('contenu');
             $table->integer('id_evenement')->nullable();
             $table->integer('id_utilisateur');
             $table->integer('id_image')->nullable();
             $table->timestamps();
 			
-			$table->foreign('id_evenement')->references('id_evenement')->on('evenements')->onDelete('cascade');
+			$table->foreign('id_evenement')->references('id')->on('evenements')->onDelete('cascade');
 			$table->foreign('id_utilisateur')->references('id')->on('users')->onDelete('cascade');
-			$table->foreign('id_image')->references('id_image')->on('images')->onDelete('cascade');
+			$table->foreign('id_image')->references('id')->on('images')->onDelete('cascade');
         });
     }
 
