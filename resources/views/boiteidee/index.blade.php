@@ -25,7 +25,7 @@
         @foreach($idees as $idee)
             <div class="blog-post">
 
-                    <h2 class="blog-post-title"><a href="/boiteidee/<?php echo $idee->id_boite_idee?>" >{{$idee->titre}}</a></h2>
+                    <h2 class="blog-post-title"><a href="/boiteidee/<?php echo $idee->id?>" >{{$idee->titre}}</a></h2>
 
                 <p>{{$idee->description}}</p>
             </div>

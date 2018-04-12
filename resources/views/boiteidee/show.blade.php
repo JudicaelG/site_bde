@@ -11,7 +11,7 @@
 @section ('content')
     <h1> {{ $idee->titre }}</h1>
 
-    <a href="/boiteidee/<?php echo $idee->id_boite_idee;?>/edit"> <button type="button" class="btn btn-primary" >Edit</button></a>
+    <a href="/boiteidee/<?php echo $idee->id;?>/edit"> <button type="button" class="btn btn-primary" >Edit</button></a>
 
     <div class="jumbotron text-center">
         <p>
