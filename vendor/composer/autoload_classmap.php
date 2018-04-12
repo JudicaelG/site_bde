@@ -12,6 +12,7 @@ return array(
     'App\\Accueil' => $baseDir . '/app/Accueil.php',
     'App\\Boite_idee' => $baseDir . '/app/Boite_idee.php',
     'App\\Boutique' => $baseDir . '/app/Boutique.php',
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Evenement' => $baseDir . '/app/Evenement.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',

@@ -320,6 +320,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'App\\Accueil' => __DIR__ . '/../..' . '/app/Accueil.php',
         'App\\Boite_idee' => __DIR__ . '/../..' . '/app/Boite_idee.php',
         'App\\Boutique' => __DIR__ . '/../..' . '/app/Boutique.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Evenement' => __DIR__ . '/../..' . '/app/Evenement.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
