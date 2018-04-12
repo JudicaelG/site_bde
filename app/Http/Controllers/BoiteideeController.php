@@ -26,10 +26,11 @@ class BoiteideeController extends Controller
 
         $idee = new Boite_idee;
 
-        /*$data = $this->validate($request, [
-           'ideeTitre' =>'required|min:3',
-           'description' => 'required',
-        ]);*/
+        $this->validate(request(),[
+           'titre' => 'required',
+           'description' => 'required'
+        ]);
+
         $idee->titre = request('titre');
         $idee->description = request('description');
         $idee->id_utilisateur = \Auth::user()->id;
@@ -42,5 +43,21 @@ class BoiteideeController extends Controller
     public function show($id)
     {
         return view('boiteidee.show', ['idee' => Boite_idee::where('id_boite_idee', $id)->first()]);
+    }
+
+    public function edit($id)
+    {
+        //$idee = Boite_idee::find($id);
+        return view('boiteidee.edit', ['idee' => Boite_idee::where('id_boite_idee', $id)->first()]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'titre' => 'required',
+            'description' => 'required'
+        ]);
+        Boite_idee::where('id_boite_idee', $id)->update($request->all());
+        return redirect()->route('boiteidee.index')->with('success','Article updated successfully');
     }
 }

@@ -30,8 +30,11 @@
                 <label for="description">Description de l'idee</label>
                 <textarea class="form-control" id="ideeDescription" name="description"></textarea>
             </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Valider</button>
+            </div>
 
-            <button type="submit" class="btn btn-primary">Valider</button>
+            @include('layouts.errors')
 
         </form>
     </div>

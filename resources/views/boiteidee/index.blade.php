@@ -20,10 +20,15 @@
 
     <div id="corps">
 
-        @foreach($idees as $idee)
-            <h4>{{$idee->titre}}</h4>
-            <p>{{$idee->description}}</p>
+        <img src="http://www.cointe.be/bailogo.png" id="imgBoiteidee">
 
+        @foreach($idees as $idee)
+            <div class="blog-post">
+
+                    <h2 class="blog-post-title"><a href="/boiteidee/<?php echo $idee->id_boite_idee?>" >{{$idee->titre}}</a></h2>
+
+                <p>{{$idee->description}}</p>
+            </div>
         @endforeach
 
 
