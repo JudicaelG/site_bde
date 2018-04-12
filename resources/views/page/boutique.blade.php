@@ -22,9 +22,9 @@
     <div id="meilleursArticlesBDE">
         <p>Meilleurs Produits BDE</p>
         <div class="imgMeilleuresVentes">
-            <div class="produits"><img src="../public/img/mugBDE.png"></div>
-            <div class="produits"><img src="../public/img/poloBDE.png"></div>
-            <div class="produits"><img src="../public/img/casquetteBDE.png"></div>
+            <div class="produits"><img src="/img/mugBDE.png"></div>
+            <div class="produits"><img src="/img/poloBDE.png"></div>
+            <div class="produits"><img src="/img/casquetteBDE.png"></div>
         </div>
     </div>
 

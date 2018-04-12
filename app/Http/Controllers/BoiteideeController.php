@@ -16,7 +16,6 @@ class BoiteideeController extends Controller
 
     public function create()
     {
-        $idees = Boite_idee::get();
-        return view('boiteidee.create', compact('idees',$idees));
+        return view('boiteidee.create');
     }
 }
