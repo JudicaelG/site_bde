@@ -48,19 +48,17 @@ class BoiteideeController extends Controller
         return view('boiteidee.edit', compact('idee'));
     }
 
-    public function update(Request $request, Boite_idee $idee)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'titre' => 'required',
-            'description' => 'required'
-        ]);
+        $idee = Boite_idee::findOrFail($id);
+        $idee->update($request->all());
+        return redirect('boiteidee');
+    }
 
-        $idee->titre = $request->titre;
-        $idee->description = $request->description;
-        $idee->date_idee = date('Y-m-d');
-        $idee->id_utilisateur = \Auth::user()->id;
-        $idee->save();
-        $request->session()->flash('message', 'Success');
+    public function destroy($id)
+    {
+        $idee = Boite_idee::findOrFail($id);
+        $idee->delete();
         return redirect('boiteidee');
     }
 }
