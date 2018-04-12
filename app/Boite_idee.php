@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Boite_idee extends Model
 {
+        public $timestamps = false;
         protected $fillable = [
-            'id_boite_idee',
+            'description',
             'titre',
-            '',
-            '',
-            ''
+            'id_utilisateur'
         ];
 }

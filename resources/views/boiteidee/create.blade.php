@@ -19,27 +19,18 @@
 @section ('content')
 
     <div id="ajout_idee">
-        <h3>Boite à idée</h3>
-        <form action="/" method="post">
+        <h3>Ajout d'une idée à la Boite</h3>
+        <form method="POST" action="/boiteidee" >
             {{csrf_field()}}
             <div class="form-group">
                 <label for="titre">Titre de l'idee</label>
-                <input type="text" class="form-control" id="ideeTitre" name="ideeTitre">
+                <input type="text" class="form-control" id="ideeTitre" name="titre">
             </div>
             <div class="form-group">
                 <label for="description">Description de l'idee</label>
-                <input type="text" class="form-control" id="ideeDescription" name="ideeDescription">
+                <textarea class="form-control" id="ideeDescription" name="description"></textarea>
             </div>
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
             <button type="submit" class="btn btn-primary">Valider</button>
 
         </form>
