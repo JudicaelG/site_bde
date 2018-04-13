@@ -21,3 +21,9 @@ Route::resource('boiteidee','BoiteideeController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//test image
+Route::get('file','ImageController@create');
+Route::post('store','ImageController@store');

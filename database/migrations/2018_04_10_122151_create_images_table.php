@@ -16,8 +16,8 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
             $table->integer('id')->autoIncrement();
-            $table->text('lien');
-            $table->string('alt', 25);
+            $table->string('lien',100);
+            $table->string('alt', 50);
             $table->integer('id_evenement')->nullable();
             $table->integer('id_produit')->nullable();
             $table->integer('id_utilisateur');

@@ -22,13 +22,14 @@
     </form>
 
 
-
     <div class="jumbotron text-center">
         <p>
             <strong>Titre de l'idée:</strong> {{ $idee->titre }}<br>
             <strong>Description:</strong> {{ $idee->description }}
         </p>
     </div>
+
+
 
 
 
