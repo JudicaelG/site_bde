@@ -18,6 +18,9 @@ class CreateParticipesTable extends Migration
             $table->integer('id_evenement')->primary;
             $table->integer('id_utilisateur')->primary;
             $table->timestamps();
+			
+			$table->foreign('id_utilisateur')->references('id')->on('users')->onDelete('cascade');
+			$table->foreign('id_evenement')->references('id')->on('evenements')->onDelete('cascade');
         });
     }
 

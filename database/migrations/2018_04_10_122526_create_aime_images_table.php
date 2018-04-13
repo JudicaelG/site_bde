@@ -18,6 +18,9 @@ class CreateAimeImagesTable extends Migration
             $table->integer('id_image')->primary;
             $table->integer('id_utilisateur')->primary;
             $table->timestamps();
+			
+			$table->foreign('id_utilisateur')->references('id')->on('users')->onDelete('cascade');
+			$table->foreign('id_image')->references('id')->on('images')->onDelete('cascade');
         });
     }
 
