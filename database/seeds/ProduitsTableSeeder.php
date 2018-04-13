@@ -14,7 +14,7 @@ class ProduitsTableSeeder extends Seeder
     {
         DB::table('produits')->insert(
             [
-                'titre' => 'Polo BDE',
+                'titre' => 'Polo BDE', //1
                 'description' => 'Polo avec le logo du BDE Exia',
                 'prix' => '12.50',
                 'id_categorie' => '1',
@@ -23,7 +23,7 @@ class ProduitsTableSeeder extends Seeder
             ]);
         DB::table('produits')->insert(
             [
-                'titre' => 'Casquette',
+                'titre' => 'Casquette', //2
                 'description' => 'Casquette avec le logo du BDE Exia',
                 'prix' => '7.50',
                 'id_categorie' => '1',
@@ -31,10 +31,46 @@ class ProduitsTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ]);
         DB::table('produits')->insert(
+        [
+            'titre' => 'Mug', //3
+            'description' => 'Mug avec le logo du BDE Exia',
+            'prix' => '10.50',
+            'id_categorie' => '2',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('produits')->insert(
             [
-                'titre' => 'Mug',
-                'description' => 'Mug avec le logo du BDE Exia',
-                'prix' => '10.50',
+                'titre' => 'Casque', //4
+                'description' => 'Casque audio Bluetooth avec le logo du BDE Exia',
+                'prix' => '35.00',
+                'id_categorie' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('produits')->insert(
+            [
+                'titre' => 'Ecouteurs', //5
+                'description' => 'Ecouteurs avec le logo du BDE Exia',
+                'prix' => '25.00',
+                'id_categorie' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('produits')->insert(
+            [
+                'titre' => 'Clé USB', //6
+                'description' => 'Clé USB 16Go avec le logo du BDE Exia',
+                'prix' => '15.00',
+                'id_categorie' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('produits')->insert(
+            [
+                'titre' => 'Hand Spinner', //7
+                'description' => 'Hand Spinner avec le logo du BDE Exia',
+                'prix' => '2.00',
                 'id_categorie' => '2',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
