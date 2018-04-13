@@ -1,13 +1,5 @@
 @extends('layouts.master')
 
-@section('head')
-
-    <link href="../public/css/app.css" rel="stylesheet">
-    <link href="../public/css/styleAccueil.css" rel="stylesheet">
-    <link href="../public/css/boutique.css" rel="stylesheet">
-
-@endsection
-
 @section ('header')
 
     <header>

@@ -23,7 +23,18 @@
             <label for="description">Task Description</label>
             <input type="text" value="{{$evenements->description}}" class="form-control" id="description" name="description" >
         </div>
-
+        <div class="form-group">
+            <label for="titre">Date de l'événement</label>
+            <input type="text" value="{{$evenements->date_evenement}}" class="form-control" id="date_evenement" name="date_evenement">
+        </div>
+        <div class="form-group">
+            <label for="titre">Prix de l'événement</label>
+            <input type="text" value="{{$evenements->prix}}" class="form-control" id="prix" name="prix">
+        </div>
+        <div class="form-group">
+            <label for="titre">Récurrence de l'événement</label>
+            <input type="text" value="{{$evenements->recurrence}}" class="form-control" id="recurrence" name="recurrence">
+        </div>
         @include('layouts.errors')
 
         <button type="submit" class="btn btn-primary">Submit</button>
