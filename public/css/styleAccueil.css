@@ -20,18 +20,14 @@ h1{
 /*
 a enlerver apres
  */
-#evenement{
-    height: 500px;
-}
+
 
 .future{
     margin: 20px 0 10px 20px;
-    height: 40px;
     width: 66%;
 }
 .passer{
     margin: 20px 0 10px 20px;
-    height: 40px;
     width: 66%;
 }
 
