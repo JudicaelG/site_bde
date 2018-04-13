@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', 'AccueilController@index');
+Route::get('/', 'AccueilController@index')->name('home');
 Route::get('/accueil', 'AccueilController@index');
 Route::get('/boutique', 'BoutiqueController@index');
 
 Route::resource('evenement','EvenementController');
+
 Route::resource('boiteidee','BoiteideeController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 
 
