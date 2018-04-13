@@ -17,26 +17,22 @@
 
             @foreach($evenements as $evenement)
                 @if($evenement->date_evenement >= $date)
-                <div class="blog-post">
-
-                    <h2 class="blog-post-title"><a href="/evenement/<?php echo $evenement->id?>" >{{$evenement->titre}}</a></h2>
-
-                    <p>{{$evenement->description}}</p>
-                </div>
+                    <div class="blog-post">
+                        <h2 class="blog-post-title"><a href="/evenement/<?php echo $evenement->id?>" >{{$evenement->titre}}</a></h2>
+                        <p>{{$evenement->description}}</p>
+                    </div>
                @endif
             @endforeach
 
         </div>
 
         <div class="passer">
-            <h3>Evénements passé:</h3>
+            <h3>Evénements passés:</h3>
 
             @foreach($evenements as $evenement)
                 @if($evenement->date_evenement < $date)
                     <div class="blog-post">
-
                         <h2 class="blog-post-title"><a href="/evenement/<?php echo $evenement->id?>" >{{$evenement->titre}}</a></h2>
-
                         <p>{{$evenement->description}}</p>
                     </div>
                 @endif

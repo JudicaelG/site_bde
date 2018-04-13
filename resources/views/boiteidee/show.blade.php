@@ -11,9 +11,9 @@
 @section ('content')
     <h1> {{ $idee->titre }}</h1>
 
-    <a href="/boiteidee/<?php echo $idee->id;?>/edit"> <button type="button" class="btn btn-primary" >Edit</button></a>
-
-    <br>
+    <form action="{{url('boiteidee', [$idee->id])}}/edit" method="GET">
+        <input type="submit" class="btn btn-danger" value="Edit"/>
+    </form>
 
     <form action="{{url('boiteidee', [$idee->id])}}" method="POST">
         <input type="hidden" name="_method" value="DELETE">

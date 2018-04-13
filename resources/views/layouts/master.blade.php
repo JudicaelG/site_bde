@@ -12,6 +12,7 @@
     <link href="{{asset('css/boutique.css')}}" rel="stylesheet">
     <link href="{{asset('css/styleFooter.css')}}" rel="stylesheet">
     <link href="{{asset('css/styleBoiteAIdee.css')}}" rel="stylesheet">
+    <link href="{{asset('css/evenement.css')}}" rel="stylesheet">
 
 
 

@@ -23,42 +23,41 @@ class EvenementController extends Controller
 
     public function store()
     {
-        $idee = new Boite_idee;
+        $evenements = new Evenement();
         $this->validate(request(),[
             'titre' => 'required',
             'description' => 'required'
         ]);
-        $idee->titre = request('titre');
-        $idee->description = request('description');
-        $idee->date_idee = date('Y-m-d');
-        $idee->id_utilisateur = \Auth::user()->id;
-        $idee->save();
-        return redirect('/boiteidee');
+        $evenements->titre = request('titre');
+        $evenements->description = request('description');
+        $evenements->id_utilisateur = \Auth::user()->id;
+        $evenements->save();
+        return redirect('/evenement');
     }
 
     public function show($id)
     {
-        $idee = Boite_idee::find($id);
-        return view('boiteidee.show', compact('idee'));
+        $evenements = Evenement::find($id);
+        return view('evenement.show', compact('evenements'));
     }
 
     public function edit($id)
     {
-        $idee = Boite_idee::find($id);
-        return view('boiteidee.edit', compact('idee'));
+        $evenements = Evenement::find($id);
+        return view('evenement.edit', compact('evenements'));
     }
 
     public function update(Request $request, $id)
     {
-        $idee = Boite_idee::findOrFail($id);
-        $idee->update($request->all());
-        return redirect('boiteidee');
+        $evenements = Evenement::findOrFail($id);
+        $evenements->update($request->all());
+        return redirect('c');
     }
 
     public function destroy($id)
     {
-        $idee = Boite_idee::findOrFail($id);
-        $idee->delete();
-        return redirect('boiteidee');
+        $evenements = Evenement::findOrFail($id);
+        $evenements->delete();
+        return redirect('evenements');
     }
 }
