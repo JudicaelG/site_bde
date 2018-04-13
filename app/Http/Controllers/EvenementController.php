@@ -57,13 +57,13 @@ class EvenementController extends Controller
     {
         $evenements = Evenement::findOrFail($id);
         $evenements->update($request->all());
-        return redirect('c');
+        return redirect('evenement');
     }
 
     public function destroy($id)
     {
         $evenements = Evenement::findOrFail($id);
         $evenements->delete();
-        return redirect('evenements');
+        return redirect('evenement');
     }
 }
