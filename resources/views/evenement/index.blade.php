@@ -38,6 +38,7 @@
                 @endif
             @endforeach
         </div>
+
     </div>
 
     <div id="ajout_evenement">

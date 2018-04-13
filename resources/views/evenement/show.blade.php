@@ -9,6 +9,8 @@
 @endsection
 
 @section ('content')
+
+
     <h1> {{ $evenements->titre }}</h1>
 
     <div id="boutons">
@@ -31,6 +33,16 @@
             <strong>Description:</strong> {{ $evenements->description }}
         </p>
     </div>
+
+
+    <div class="jumbotron text-center">
+        @foreach($commentaires as $commentaire)
+            <strong>Commentaire:</strong> <?php $commentaire->contenu ?><br>
+        @endforeach
+
+    </div>
+
+
 
 
 @endsection

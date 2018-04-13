@@ -44725,7 +44725,7 @@ function parseHTML (html, options) {
     if (!lastTag || !isPlainTextElement(lastTag)) {
       var textEnd = html.indexOf('<');
       if (textEnd === 0) {
-        // Comment:
+        // Commentaire:
         if (comment.test(html)) {
           var commentEnd = html.indexOf('-->');
 

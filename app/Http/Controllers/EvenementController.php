@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Commentaire;
 use App\Evenement;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use PhpParser\Comment;
 
 class EvenementController extends Controller
 {
@@ -24,6 +26,7 @@ class EvenementController extends Controller
     public function store()
     {
         $evenements = new Evenement();
+        $commentaires = new Commentaire();
         $this->validate(request(),[
             'titre' => 'required',
             'description' => 'required',
@@ -38,13 +41,20 @@ class EvenementController extends Controller
         $evenements->recurrence = request('recurrence');
         $evenements->id_utilisateur = \Auth::user()->id;
         $evenements->save();
+
+        $commentaires->contenu= request('contenu');
+        $commentaires->id_utilisateur= \Auth::user()->id;
+        $commentaires-> save();
+
         return redirect('/evenement');
     }
 
     public function show($id)
     {
-        $evenements = Evenement::find($id);
-        return view('evenement.show', compact('evenements'));
+       $evenements = Evenement::find($id);
+        $commentaires = Commentaire::find($id);
+        echo $commentaires;
+        return view('evenement.show', compact('commentaires'));
     }
 
     public function edit($id)
