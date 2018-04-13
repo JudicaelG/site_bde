@@ -19,10 +19,10 @@
             </form>
         </li>
         @guest
-            <li "nav-item active"><a class="nav-link connexion" href="{{ route('login') }}">Se connecter <span class="sr-only">(current)</span></a></li>
-            <li "nav-item active"><a class="nav-link inscription" href="{{ route('register') }}">S'inscrire <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a class="nav-link connexion" href="{{ route('login') }}">Se connecter <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a class="nav-link inscription" href="{{ route('register') }}">S'inscrire <span class="sr-only">(current)</span></a></li>
         @else
-            <li "nav-item active"><a id="logout" class="nav-link" href="{{ route('logout') }}">Déconnexion</a>
+            <li class="nav-item active"><a id="logout" class="nav-link" href="{{ route('logout') }}">Déconnexion</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
                         {{ csrf_field() }}
                     </form>

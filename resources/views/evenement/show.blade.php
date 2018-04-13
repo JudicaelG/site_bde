@@ -30,7 +30,10 @@
     <div class="jumbotron text-center">
         <p>
             <strong>Titre de l'événement:</strong> {{ $evenements->titre }}<br>
-            <strong>Description:</strong> {{ $evenements->description }}
+            <strong>Description:</strong> {{ $evenements->description }}<br>
+            <strong>Date:</strong> {{ $evenements->date_evenement }}<br>
+            <strong>Prix:</strong> {{ $evenements->prix }}<br>
+            <strong>Récurrence:</strong> {{ $evenements->recurrence }}<br>
         </p>
     </div>
 
