@@ -14,7 +14,7 @@ class ImagesTableSeeder extends Seeder
     {
         DB::table('images')->insert(
             [
-                'lien' => 'C:/dossier_bde/images/crepes.jpeg',
+                'lien' => '/img/crepes.jpeg',
                 'alt' => 'autre chemin',
                 'id_evenement' => '3',
                 'id_utilisateur' => '3',
@@ -23,7 +23,7 @@ class ImagesTableSeeder extends Seeder
             ]);
         DB::table('images')->insert(
             [
-                'lien' => 'C:/dossier_bde/images/crepelololol.jpeg',
+                'lien' => '/img/crepelololol.jpeg',
                 'alt' => 'autre chemin',
                 'id_evenement' => '3',
                 'id_utilisateur' => '4',
@@ -32,7 +32,16 @@ class ImagesTableSeeder extends Seeder
             ]);
         DB::table('images')->insert(
             [
-                'lien' => 'C:/dossier_bde/images/casquette.jpeg',
+                'lien' => '/img/poloBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '1',
+                'id_utilisateur' => '1',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/casquetteBDE.png',
                 'alt' => 'autre chemin',
                 'id_produit' => '2',
                 'id_utilisateur' => '1',
@@ -41,13 +50,57 @@ class ImagesTableSeeder extends Seeder
             ]);
         DB::table('images')->insert(
             [
-                'lien' => 'C:/dossier_bde/images/tacos_cest_bon.jpeg',
+                'lien' => '/img/tacos_cest_bon.jpeg',
                 'alt' => 'autre chemin',
                 'id_evenement' => '4',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
-
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/casqueBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '4',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/mugBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '3',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/ecouteursBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '5',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/usbBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '6',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/handzimmerBDE.png',
+                'alt' => 'autre chemin',
+                'id_produit' => '7',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
     }
 }
