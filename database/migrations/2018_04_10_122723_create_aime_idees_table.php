@@ -18,6 +18,9 @@ class CreateAimeIdeesTable extends Migration
             $table->integer('id_utilisateur')->primary;
             $table->integer('id_boite_idee')->primary;
             $table->timestamps();
+			
+			$table->foreign('id_utilisateur')->references('id')->on('users')->onDelete('cascade');
+			$table->foreign('id_boite_idee')->references('id')->on('boite_idees')->onDelete('cascade');
         });
     }
 

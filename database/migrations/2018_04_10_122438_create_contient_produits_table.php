@@ -19,6 +19,9 @@ class CreateContientProduitsTable extends Migration
             $table->integer('id_produit')->primary;
             $table->integer('id_commande')->primary;
             $table->timestamps();
+			
+			$table->foreign('id_produit')->references('id')->on('produits')->onDelete('cascade');
+			$table->foreign('id_commande')->references('id')->on('commandes')->onDelete('cascade');
         });
     }
 
