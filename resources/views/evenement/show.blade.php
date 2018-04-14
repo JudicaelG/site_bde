@@ -40,7 +40,7 @@
 
     <div class="jumbotron text-center">
         @foreach($commentaires as $commentaire)
-            <strong>Commentaire:</strong> <?php $commentaire->contenu ?><br>
+            <strong>Commentaire:</strong> {{ $commentaire->contenu }}<br>
         @endforeach
 
     </div>

@@ -51,10 +51,9 @@ class EvenementController extends Controller
 
     public function show($id)
     {
-       $evenements = Evenement::find($id);
-        $commentaires = Commentaire::find($id);
-        echo $commentaires;
-        return view('evenement.show', compact('commentaires'));
+        $evenements = Evenement::find($id);
+        $commentaires = Commentaire::where('id_evenement', $id)->get();
+        return view('evenement.show', compact('evenements'), compact('commentaires'));
     }
 
     public function edit($id)
