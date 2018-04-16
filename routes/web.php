@@ -17,12 +17,10 @@ Route::get('/boutique', 'BoutiqueController@index');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
-
-Route::middleware('auth')->group(function(){
-	Route::resource('boiteidee','BoiteideeController');
-});
-
+Route::resource('boiteidee','BoiteideeController');
 Route::resource('images','ImageController');
+Route::resource('evenement/{id}/participe','ParticipeController');
+
 
 Auth::routes();
 
@@ -32,5 +30,5 @@ Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
 Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 
 //test image
-Route::post('file','ImageController@create');
-Route::get('store','ImageController@store');
+Route::get('file','ImageController@create');
+Route::post('/images/store','ImageController@store');

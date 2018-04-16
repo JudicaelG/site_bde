@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Commentaire;
 use App\Evenement;
 use App\Image;
+use App\Participe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpParser\Comment;
@@ -54,11 +55,16 @@ class EvenementController extends Controller
         $commentaires = Commentaire::where('id_evenement', $id)->get();
         $imageActive = Image::where('id_evenement', $id)->first();
         $images = Image::where('id_evenement', $id)->get();
+        $dateDuJour = new \DateTime("now");
+        $date = $dateDuJour->format("Y-m-d");
+        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
         return view('evenement.show')
             ->with(compact('evenements'))
             ->with(compact('commentaires'))
             ->with(compact('imageActive'))
-            ->with(compact('images'));
+            ->with(compact('images'))
+            ->with(compact('date'))
+            ->with(compact('participes'));
     }
 
     public function edit($id)

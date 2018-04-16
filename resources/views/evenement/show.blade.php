@@ -109,7 +109,24 @@
 	@endauth
 
 
-    <a href="../participe/create" class="btn btn-primary">Participer à l'événement !!</a><hr>
+    @if($evenements->date_evenement >= $date)
+        @if(is_null($participes)===false)
+            <form method="POST" action="/evenement/{{$evenements->id}}/participe" >
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" class="btn btn-danger" value="Je participe plus"/>
+            </form>
+        @endif
+        @if(is_null($participes)===true)
+            <form method="POST" action="/evenement/{{$evenements->id}}/participe">
+                {{csrf_field()}}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" value="Participe">Je participe, et j'ai un stage</button>
+                </div>
+            </form>
+        @endif
+    @endif
+
 
 
 @endsection
