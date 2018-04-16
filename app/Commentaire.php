@@ -9,6 +9,7 @@ class Commentaire extends Model
     public $timestamps = false;
     protected $fillable = [
         'contenu',
-        'id_utilisateur'
+        'id_utilisateur',
+        'id_evenement'
     ];
 }
