@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Commentaire;
 use App\Evenement;
+use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PhpParser\Comment;
@@ -53,7 +54,13 @@ class EvenementController extends Controller
     {
         $evenements = Evenement::find($id);
         $commentaires = Commentaire::where('id_evenement', $id)->get();
-        return view('evenement.show', compact('evenements'), compact('commentaires'));
+        $imageActive = Image::where('id_evenement', $id)->first();
+        $images = Image::where('id_evenement', $id)->get();
+        return view('evenement.show')
+            ->with(compact('evenements'))
+            ->with(compact('commentaires'))
+            ->with(compact('imageActive'))
+            ->with(compact('images'));
     }
 
     public function edit($id)
