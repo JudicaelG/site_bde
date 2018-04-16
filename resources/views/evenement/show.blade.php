@@ -12,7 +12,8 @@
 
 
     <h1> {{ $evenements->titre }}</h1>
-
+	
+	@bde
     <div id="boutons">
 
         <form action="{{url('evenement', [$evenements->id])}}/edit" method="GET">
@@ -25,8 +26,8 @@
             <input type="submit" class="btn btn-danger" value="Delete"/>
         </form>
     </div>
-
-
+	@endbde	
+	
     <div class="jumbotron text-center">
         <p>
             <strong>Titre de l'événement:</strong> {{ $evenements->titre }}<br>
@@ -77,7 +78,8 @@
                 </div>
         </div>
     @endif
-
+	
+	@auth
     <div class="jumbotron text-center">
         <h3>Espace commentaire</h3>
         @foreach($commentaires as $commentaire)
@@ -98,7 +100,7 @@
             </form>
         </div>
     </div>
-
+	@endauth
 
 
 @endsection

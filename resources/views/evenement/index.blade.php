@@ -40,9 +40,11 @@
         </div>
 
     </div>
-
+	
+	@bde
     <div id="ajout_evenement">
         <a href="evenement/create"> Ajouter un evenement</a>
     </div>
+	@endbde
 
 @endsection
