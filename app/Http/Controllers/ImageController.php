@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Image;
+use App\Commentaire;
 use Illuminate\Support\Facades\Input;
 
 class ImageController extends Controller
@@ -52,9 +53,11 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        //
+        $images = Image::find($id);
+        $commentaires = Commentaire::where('id_image', $id)->get();
+        return view('images.show', compact('images'), compact('commentaires'));
     }
     /**
      * Show the form for editing the specified resource.

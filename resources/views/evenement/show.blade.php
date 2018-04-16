@@ -54,11 +54,11 @@
                         <div class="carousel-inner">
 
                             <div class="item active">
-                                <img src="{{ $imageActive->lien }}" alt="{{ $imageActive->alt }}" class="photo_album">
+                                <a href="/images/{{$imageActive->id}}"><img src="{{ $imageActive->lien }}" alt="{{ $imageActive->alt }}"   class="photo_album"></a>
                             </div>
                             @foreach($images as $image)
                             <div class="item ">
-                                <img src="{{ $image->lien }}" alt="{{ $image->alt }}" class="photo_album">
+                                <a href="/images/{{$image->id}}"><img src="{{ $image->lien }}" alt="{{ $image->alt }}"  class="photo_album"></a>
                             </div>
                             @endforeach
 

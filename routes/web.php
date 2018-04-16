@@ -18,6 +18,7 @@ Route::get('/boutique', 'BoutiqueController@index');
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
 Route::resource('boiteidee','BoiteideeController');
+Route::resource('images','ImageController');
 
 Auth::routes();
 
