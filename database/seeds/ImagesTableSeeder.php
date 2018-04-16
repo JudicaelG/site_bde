@@ -15,7 +15,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/crepes.jpg',
-                'alt' => 'autre chemin',
+                'alt' => 'crepes',
                 'id_evenement' => '3',
                 'id_utilisateur' => '3',
                 'created_at' => Carbon::now(),
@@ -24,7 +24,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/crepelololol.jpg',
-                'alt' => 'autre chemin',
+                'alt' => 'crepes nutella',
                 'id_evenement' => '3',
                 'id_utilisateur' => '4',
                 'created_at' => Carbon::now(),
@@ -33,7 +33,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/poloBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'poloBDE',
                 'id_produit' => '1',
                 'id_utilisateur' => '1',
                 'created_at' => Carbon::now(),
@@ -42,7 +42,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/casquetteBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'casquetteBDE',
                 'id_produit' => '2',
                 'id_utilisateur' => '1',
                 'created_at' => Carbon::now(),
@@ -51,7 +51,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/tacos_cest_bon.jpeg',
-                'alt' => 'autre chemin',
+                'alt' => 'tacos',
                 'id_evenement' => '4',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
@@ -60,7 +60,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/casqueBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'casqueBDE',
                 'id_produit' => '4',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
@@ -69,7 +69,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/mugBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'mugBDE',
                 'id_produit' => '3',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
@@ -78,7 +78,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/ecouteursBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'ecouteursBDE',
                 'id_produit' => '5',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
@@ -87,7 +87,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/usbBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'usbBDE',
                 'id_produit' => '6',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),
@@ -96,7 +96,7 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->insert(
             [
                 'lien' => '/img/handzimmerBDE.png',
-                'alt' => 'autre chemin',
+                'alt' => 'handzimmerBDE',
                 'id_produit' => '7',
                 'id_utilisateur' => '2',
                 'created_at' => Carbon::now(),

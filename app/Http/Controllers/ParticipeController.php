@@ -14,7 +14,7 @@ class ParticipeController extends Controller
      */
     public function index()
     {
-
+        return view('evement.index');
     }
 
     /**
