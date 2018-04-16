@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
 
 //test image
 Route::get('file','ImageController@create');

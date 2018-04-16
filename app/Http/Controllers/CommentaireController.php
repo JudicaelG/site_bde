@@ -21,13 +21,20 @@ class CommentaireController extends Controller
 
     }
 
-    public function store()
+    public function addCommentaire()
     {
-        $commentaire = Commentaire();
+        $commentaire = new Commentaire();
         $commentaire->contenu= request('contenu');
-        $commentaire->id_utilisateur= request('1');
+        $commentaire->id_utilisateur= request(1);
         $commentaire-> save();
-        return redirect('/evenement.{id}');
+        return back();
+      /* Auth::user()->id*/
+
+       /*Commentaire::create([
+           'contenu' => request('contenu'),
+           'id_utilisateur' => $commentaire->id
+       ]);
+       return back();*/
     }
 
     public function show($id)

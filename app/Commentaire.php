@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Commentaire extends Model
 {
-    public function post()
-    {
-        return $this->belongsTo(Post::class);
-    }
-
+    public $timestamps = false;
+    protected $fillable = [
+        'contenu',
+        'id_utilisateur'
+    ];
 }
