@@ -29,7 +29,7 @@ class EvenementsTableSeeder extends Seeder
                 'description' => 'Une distribution de Maneuleuh a eu lieu comme chaque année',
                 'date_evenement' => '2017-12-05',
                 'prix' => '0',
-                'recurrence' => 'Annuuellement',
+                'recurrence' => 'Annuellement',
                 'id_utilisateur' => '4',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

@@ -14,7 +14,7 @@ class ImagesTableSeeder extends Seeder
     {
         DB::table('images')->insert(
             [
-                'lien' => '/img/crepes.jpeg',
+                'lien' => '/img/crepes.jpg',
                 'alt' => 'autre chemin',
                 'id_evenement' => '3',
                 'id_utilisateur' => '3',
@@ -23,7 +23,7 @@ class ImagesTableSeeder extends Seeder
             ]);
         DB::table('images')->insert(
             [
-                'lien' => '/img/crepelololol.jpeg',
+                'lien' => '/img/crepelololol.jpg',
                 'alt' => 'autre chemin',
                 'id_evenement' => '3',
                 'id_utilisateur' => '4',
