@@ -13,9 +13,9 @@
 
     <h1> {{ $evenements->titre }}</h1>
 	
-	@bde
+	
     <div id="boutons">
-
+	@bde
         <form action="{{url('evenement', [$evenements->id])}}/edit" method="GET">
             <input type="submit" class="btn btn-danger" value="Edit"/>
         </form>
@@ -25,14 +25,14 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="btn btn-danger" value="Delete"/>
         </form>
-
+	@endbde
         <form action="{{url('images/create')}}" method="GET">
             <input type="hidden" name="_method" value="Ajout Image">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="btn btn-danger" value="Ajout Image"/>
         </form>
     </div>
-	@endbde	
+		
 	
     <div class="jumbotron text-center">
         <p>
