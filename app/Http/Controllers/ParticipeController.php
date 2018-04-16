@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Evenement;
+use App\Participe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,8 +16,7 @@ class ParticipeController extends Controller
      */
     public function index()
     {
-        $participe = Participe::get();
-        return view('evement.index', compact('participe', $participe));
+        echo 'index';
     }
 
     /**
@@ -25,7 +26,7 @@ class ParticipeController extends Controller
      */
     public function create()
     {
-        //
+        echo 'mabite';
     }
 
     /**
@@ -34,9 +35,13 @@ class ParticipeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id)
     {
-        //
+        $participe = new Participe();
+        $participe->id_evenement = $id;
+        $participe->id_utilisateur = \Auth::user()->id;
+        $participe->save();
+        return redirect('/evenement'.$id);
     }
 
     /**
@@ -81,6 +86,8 @@ class ParticipeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+        $participes->delete();
+        return redirect('/evenement/'.$id);
     }
 }
