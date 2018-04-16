@@ -122,23 +122,24 @@
     </div>
 	@endauth
 
+    @if(\Auth::check())
+        @if($evenements->date_evenement >= $date)
+            @if(is_null($participes)===false)
+                <form action="/evenement/participe/{{$evenements->id}}" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" class="btn btn-danger" value="Je ne participe plus"/>
+                </form>
 
-    @if($evenements->date_evenement >= $date)
-        @if(is_null($participes)===false)
-            <form action="/evenement/participe/{{$evenements->id}}" method="POST">
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Je ne participe plus"/>
-            </form>
-
-        @endif
-        @if(is_null($participes)===true)
-            <form method="POST" action="/evenement/{{$evenements->id}}/participe">
-                {{csrf_field()}}
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary" value="Participe">Je participe, et j'ai un stage</button>
-                </div>
-            </form>
+            @endif
+            @if(is_null($participes)===true)
+                <form method="POST" action="/evenement/{{$evenements->id}}/participe">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" value="Participe">Je participe, et j'ai un stage</button>
+                    </div>
+                </form>
+            @endif
         @endif
     @endif
 

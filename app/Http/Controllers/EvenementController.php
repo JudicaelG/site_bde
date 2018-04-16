@@ -57,7 +57,11 @@ class EvenementController extends Controller
         $images = Image::where('id_evenement', $id)->get();
         $dateDuJour = new \DateTime("now");
         $date = $dateDuJour->format("Y-m-d");
-        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+        //echo \Auth::user()->id;
+        if (\Auth::check()){
+            $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+        }
+
         return view('evenement.show')
             ->with(compact('evenements'))
             ->with(compact('commentaires'))
