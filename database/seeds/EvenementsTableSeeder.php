@@ -40,7 +40,7 @@ class EvenementsTableSeeder extends Seeder
                 'description' => 'Une vente de crèpes à l\'unité a eu lieu pour la chandeleur',
                 'date_evenement' => '2018-02-01',
                 'prix' => '1.50',
-                'recurrence' => 'Annuuellement',
+                'recurrence' => 'Annuellement',
                 'id_utilisateur' => '3',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

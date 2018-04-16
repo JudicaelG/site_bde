@@ -1,11 +1,11 @@
 <?php
-namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\Image;
-use App\Commentaire;
-use Illuminate\Support\Facades\Input;
 
-class ImageController extends Controller
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class ParticipeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,10 @@ class ImageController extends Controller
      */
     public function index()
     {
-
+        $participe = Participe::get();
+        return view('evement.index', compact('participe', $participe));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -23,29 +25,20 @@ class ImageController extends Controller
      */
     public function create()
     {
-        return view('images.create');
+        //
     }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $img = new Image();
-        $img->alt= Input::get('name');
-        $img->id_utilisateur= \Auth::user()->id;
-        if (Input::hasFile('image')){
-            $file=Input::file('image');
-            $file->move(public_path().'/img',$file->getClientOriginalName());
-
-            $img->lien = $file->getClientOriginalName();
-        }
-
-        $img->save();
-        return redirect('/evenement');
+        //
     }
+
     /**
      * Display the specified resource.
      *
@@ -54,10 +47,9 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        $images = Image::find($id);
-        $commentaires = Commentaire::where('id_image', $id)->get();
-        return view('images.show', compact('images'), compact('commentaires'));
+        //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -68,6 +60,7 @@ class ImageController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -79,6 +72,7 @@ class ImageController extends Controller
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *

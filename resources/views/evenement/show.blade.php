@@ -25,6 +25,12 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="btn btn-danger" value="Delete"/>
         </form>
+
+        <form action="{{url('images/create')}}" method="GET">
+            <input type="hidden" name="_method" value="Ajout Image">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="btn btn-danger" value="Ajout Image"/>
+        </form>
     </div>
 	@endbde	
 	
@@ -55,11 +61,11 @@
                         <div class="carousel-inner">
 
                             <div class="item active">
-                                <img src="{{ $imageActive->lien }}" alt="{{ $imageActive->alt }}" class="photo_album">
+                                <a href="/images/{{$imageActive->id}}"><img src="{{ $imageActive->lien }}" alt="{{ $imageActive->alt }}"   class="photo_album"></a>
                             </div>
                             @foreach($images as $image)
                             <div class="item ">
-                                <img src="{{ $image->lien }}" alt="{{ $image->alt }}" class="photo_album">
+                                <a href="/images/{{$image->id}}"><img src="{{ $image->lien }}" alt="{{ $image->alt }}"  class="photo_album"></a>
                             </div>
                             @endforeach
 
@@ -100,7 +106,12 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
 	@endauth
+=======
+
+    <a href="../participe/create" class="btn btn-primary">Participer à l'événement !!</a><hr>
+>>>>>>> origin/master
 
 
 @endsection

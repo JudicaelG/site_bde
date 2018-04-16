@@ -43,9 +43,7 @@ class EvenementController extends Controller
         $evenements->id_utilisateur = \Auth::user()->id;
         $evenements->save();
 
-        $commentaires->contenu= request('contenu');
-        $commentaires->id_utilisateur= \Auth::user()->id;
-        $commentaires-> save();
+
 
         return redirect('/evenement');
     }

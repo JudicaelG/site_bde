@@ -18,18 +18,19 @@ Route::get('/boutique', 'BoutiqueController@index');
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
 
-
 Route::middleware('auth')->group(function(){
 	Route::resource('boiteidee','BoiteideeController');
 });
-//Route::resource('boiteidee','BoiteideeController');
+
+Route::resource('images','ImageController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
+Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 
 //test image
 Route::get('file','ImageController@create');
-Route::post('store','ImageController@store');
+Route::post('/images/store','ImageController@store');
