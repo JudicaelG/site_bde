@@ -23,8 +23,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
-        return view('Image/create');
+        return view('images.create');
     }
     /**
      * Store a newly created resource in storage.
@@ -32,20 +31,20 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $user = new Image();
-        $user->alt= Input::get('name');
-        $user->id_utilisateur= Input::get('id');
+        $img = new Image();
+        $img->alt= Input::get('name');
+        $img->id_utilisateur= \Auth::user()->id;
         if (Input::hasFile('image')){
             $file=Input::file('image');
-            $file->move(public_path().'/images',$file->getClientOriginalName());
+            $file->move(public_path().'/img',$file->getClientOriginalName());
 
-            $user->lien = $file->getClientOriginalName();
+            $img->lien = $file->getClientOriginalName();
         }
 
-        $user->save();
-        return back();
+        $img->save();
+        return redirect('/evenement');
     }
     /**
      * Display the specified resource.

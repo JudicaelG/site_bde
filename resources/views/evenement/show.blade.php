@@ -24,6 +24,12 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="btn btn-danger" value="Delete"/>
         </form>
+
+        <form action="{{url('images/create')}}" method="GET">
+            <input type="hidden" name="_method" value="Ajout Image">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="btn btn-danger" value="Ajout Image"/>
+        </form>
     </div>
 
 

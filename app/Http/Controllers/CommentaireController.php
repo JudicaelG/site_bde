@@ -31,6 +31,16 @@ class CommentaireController extends Controller
         $commentaire-> save();
         return back();
     }
+    public function addCommentaireImg($id)
+    {
+        $commentaire = new Commentaire();
+        $commentaire->contenu= request('contenu');
+        $commentaire->id_utilisateur= \Auth::user()->id;
+        $commentaire->created_at =now();
+        $commentaire-> id_image= $id;
+        $commentaire-> save();
+        return back();
+    }
 
     public function show($id)
     {

@@ -25,7 +25,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
+Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 
 //test image
 Route::get('file','ImageController@create');
-Route::post('store','ImageController@store');
+Route::post('/images/store','ImageController@store');
