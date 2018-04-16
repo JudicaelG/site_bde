@@ -106,12 +106,10 @@
             </form>
         </div>
     </div>
-<<<<<<< HEAD
 	@endauth
-=======
+
 
     <a href="../participe/create" class="btn btn-primary">Participer à l'événement !!</a><hr>
->>>>>>> origin/master
 
 
 @endsection
