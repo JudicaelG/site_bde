@@ -125,11 +125,12 @@
 
     @if($evenements->date_evenement >= $date)
         @if(is_null($participes)===false)
-            <form method="POST" action="/evenement/{{$evenements->id}}/participe" >
+            <form action="/evenement/participe/{{$evenements->id}}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Je participe plus"/>
+                <input type="submit" class="btn btn-danger" value="Je ne participe plus"/>
             </form>
+
         @endif
         @if(is_null($participes)===true)
             <form method="POST" action="/evenement/{{$evenements->id}}/participe">

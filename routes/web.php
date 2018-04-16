@@ -19,7 +19,8 @@ Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
 Route::resource('boiteidee','BoiteideeController');
 Route::resource('images','ImageController');
-Route::resource('evenement/{id}/participe','ParticipeController');
+Route::resource('evenement/participe','ParticipeController');
+Route::post('evenement/{id}/participe','ParticipeController@store');
 
 
 Auth::routes();

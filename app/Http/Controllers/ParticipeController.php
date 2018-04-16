@@ -41,7 +41,7 @@ class ParticipeController extends Controller
         $participe->id_evenement = $id;
         $participe->id_utilisateur = \Auth::user()->id;
         $participe->save();
-        return redirect('/evenement'.$id);
+        return redirect('/evenement/'.$id);
     }
 
     /**
@@ -86,8 +86,8 @@ class ParticipeController extends Controller
      */
     public function destroy($id)
     {
-        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
-        $participes->delete();
+        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
+        //$participes->delete();
         return redirect('/evenement/'.$id);
     }
 }
