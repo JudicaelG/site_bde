@@ -105,6 +105,7 @@
         </div>
     </div>
 
+    <a href="../participe/create" class="btn btn-primary">Participer à l'événement !!</a><hr>
 
 
 @endsection

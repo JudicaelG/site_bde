@@ -20,7 +20,6 @@
                     <div class="blog-post">
                         <h2 class="blog-post-title"><a href="/evenement/<?php echo $evenement->id?>" >{{$evenement->titre}}</a></h2>
                         <p>{{$evenement->description}}</p>
-                        <a href="partcipe/create"> Partciper à l'événement</a>
                     </div>
                @endif
             @endforeach
