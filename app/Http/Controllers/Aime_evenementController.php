@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Evenement;
-use App\Participe;
+use App\Aime_evenement;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ParticipeController extends Controller
+class Aime_evenementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class ParticipeController extends Controller
      */
     public function index()
     {
-        echo 'index';
+        //
     }
 
     /**
@@ -26,7 +25,7 @@ class ParticipeController extends Controller
      */
     public function create()
     {
-        echo 'mabite';
+        //
     }
 
     /**
@@ -37,10 +36,10 @@ class ParticipeController extends Controller
      */
     public function store($id)
     {
-        $participe = new Participe();
-        $participe->id_evenement = $id;
-        $participe->id_utilisateur = \Auth::user()->id;
-        $participe->save();
+        $aimeEvenement = new Aime_evenement();
+        $aimeEvenement->id_evenement = $id;
+        $aimeEvenement->id_utilisateur = \Auth::user()->id;
+        $aimeEvenement->save();
         return redirect('/evenement/'.$id);
     }
 
@@ -86,7 +85,7 @@ class ParticipeController extends Controller
      */
     public function destroy($id)
     {
-        $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
+        $aimeEvenement = Aime_evenement::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
         return redirect('/evenement/'.$id);
     }
 }

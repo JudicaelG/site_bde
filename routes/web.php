@@ -19,8 +19,15 @@ Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
 Route::resource('boiteidee','BoiteideeController');
 Route::resource('images','ImageController');
+
 Route::resource('evenement/participe','ParticipeController');
 Route::post('evenement/{id}/participe','ParticipeController@store');
+Route::resource('evenement/aime','Aime_evenementController');
+Route::post('evenement/{id}/aime','Aime_evenementController@store');
+Route::resource('boiteidee/aime','Aime_ideeController');
+Route::post('boiteidee/{id}/aime','Aime_ideeController@store');
+Route::resource('images/aime','Aime_imageController');
+Route::post('images/{id}/aime','Aime_imageController@store');
 
 
 Auth::routes();

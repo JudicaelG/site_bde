@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Aime_image;
 use Illuminate\Http\Request;
 use App\Image;
 use App\Commentaire;
@@ -56,7 +57,13 @@ class ImageController extends Controller
     {
         $images = Image::find($id);
         $commentaires = Commentaire::where('id_image', $id)->get();
-        return view('images.show', compact('images'), compact('commentaires'));
+        if (\Auth::check()){
+            $aimeImage = Aime_image::where('id_image', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+        }
+        return view('images.show')
+            ->with(compact('images'))
+            ->with(compact('commentaires'))
+            ->with(compact('aimeImage'));
     }
     /**
      * Show the form for editing the specified resource.

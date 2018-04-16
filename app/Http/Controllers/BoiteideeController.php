@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Aime_idee;
 use App\Boite_idee;
 use App\User;
 use Illuminate\Http\Request;
@@ -39,7 +40,10 @@ class BoiteideeController extends Controller
     public function show($id)
     {
         $idee = Boite_idee::find($id);
-        return view('boiteidee.show', compact('idee'));
+        if (\Auth::check()){
+            $aimeIdee = Aime_idee::where('id_boite_idee', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+        }
+        return view('boiteidee.show', compact('idee'), compact('aimeIdee'));
     }
 
     public function edit($id)

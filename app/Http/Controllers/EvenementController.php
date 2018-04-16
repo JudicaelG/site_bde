@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Aime_evenement;
 use App\Commentaire;
 use App\Evenement;
 use App\Image;
@@ -60,6 +61,7 @@ class EvenementController extends Controller
         //echo \Auth::user()->id;
         if (\Auth::check()){
             $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
+            $aimeEvenement = Aime_evenement::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
         }
 
         return view('evenement.show')
@@ -68,7 +70,8 @@ class EvenementController extends Controller
             ->with(compact('imageActive'))
             ->with(compact('images'))
             ->with(compact('date'))
-            ->with(compact('participes'));
+            ->with(compact('participes'))
+            ->with(compact('aimeEvenement'));
     }
 
     public function edit($id)

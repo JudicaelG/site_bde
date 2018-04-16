@@ -49,4 +49,25 @@
         </div>
     </div>
 
+    @if(\Auth::check())
+
+        @if(is_null($aimeImage)===false)
+            <form action="/images/aime/{{$images->id}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" class="btn btn-danger" value="Je n'aime pas cette image"/>
+            </form>
+
+        @endif
+
+        @if(is_null($aimeImage)===true)
+            <form method="POST" action="/images/{{$images->id}}/aime">
+                {{csrf_field()}}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cette image</button>
+                </div>
+            </form>
+        @endif
+
+    @endif
 @endsection

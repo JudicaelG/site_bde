@@ -132,6 +132,7 @@
                 </form>
 
             @endif
+
             @if(is_null($participes)===true)
                 <form method="POST" action="/evenement/{{$evenements->id}}/participe">
                     {{csrf_field()}}
@@ -141,7 +142,29 @@
                 </form>
             @endif
         @endif
+
+        @if(is_null($aimeEvenement)===false)
+            <form action="/evenement/aime/{{$evenements->id}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet Evenement"/>
+            </form>
+
+        @endif
+
+        @if(is_null($aimeEvenement)===true)
+            <form method="POST" action="/evenement/{{$evenements->id}}/aime">
+                {{csrf_field()}}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cet Evenement</button>
+                </div>
+            </form>
+        @endif
+
     @endif
+
+
+
 
 
 
