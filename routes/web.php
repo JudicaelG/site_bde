@@ -32,5 +32,5 @@ Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
 Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 
 //test image
-Route::get('file','ImageController@create');
-Route::post('/images/store','ImageController@store');
+Route::post('file','ImageController@create');
+Route::get('store','ImageController@store');

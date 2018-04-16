@@ -25,13 +25,14 @@
 
     <h3 class="jumbotron">Laravel Multiple File Upload</h3>
     <form method="post" action="store" enctype="multipart/form-data">
+        {{csrf_field()}}
         <label for="name">name</label>
         <input type="text" name="name"><br>
         <label for="image">image</label>
         <input type="file" name="image">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-        <input type="submit" class="btn btn-primary" style="margin-top:10px">Submit</input>
+        <input type="submit" class="btn btn-primary" style="margin-top:10px"></input>
 
     </form>
 </div>

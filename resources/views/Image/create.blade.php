@@ -33,7 +33,7 @@
         <input type="file" name="image">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-        <input type="submit" class="btn btn-primary" style="margin-top:10px">Submit</input>
+        <input type="submit" class="btn btn-primary" style="margin-top:10px"></input>
 
     </form>
 </div>
