@@ -14,7 +14,8 @@ class ParticipeController extends Controller
      */
     public function index()
     {
-        return view('evement.index');
+        $participe = Participe::get();
+        return view('evement.index', compact('participe', $participe));
     }
 
     /**
