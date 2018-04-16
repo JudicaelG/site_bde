@@ -10,6 +10,9 @@ class Evenement extends Model
     protected $fillable = [
         'description',
         'titre',
-        'id_utilisateur'
+        'id_utilisateur',
+        'date_evenement',
+        'prix',
+        'recurrence'
     ];
 }
