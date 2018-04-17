@@ -13,7 +13,7 @@
 
 Route::get('/', 'AccueilController@index');
 
-Route::get('/boutique', 'BoutiqueController@index');
+Route::resource('boutique', 'ProduitController');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
