@@ -12,8 +12,4 @@ class Produit extends Model
         'prix',
     ];
 	
-	public function images()
-	{
-		return $this->hasOne('App\Image', 'id_produit');
-	}
 }

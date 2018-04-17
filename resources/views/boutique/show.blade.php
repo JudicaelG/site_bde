@@ -18,6 +18,13 @@
 		<img src="{{ $images->lien }}" alt="{{ $images->alt }}">
 		<h5><strong>Prix : </strong>{{ $produits->prix }}</h5>
 	</p>
+	<form action="" method="post">
+		
+		<input type="hidden" name="id" value="{{ $produits->id }}">
+		<input type="hidden" name="titre" value="{{ $produits->titre }}">
+		<input type="hidden" name="prix" value="{{ $produits->prix }}">
+		<button type="submit" class="btn btn-default">Ajouter au panier</button>
+	</form>
 </div>
 
 

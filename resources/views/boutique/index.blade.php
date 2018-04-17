@@ -26,6 +26,7 @@
             <div class="produits">
 				<h2 class="blog-post"><a href="/boutique/<?php echo $produit->id?>">{{ $produit->titre }}</a></h2>
 				<h4>{{ $produit->description }}</h4>
+				<img src="{{$produit->lien}}" alt="{{ $produit->alt}}">
 				<h4>Prix :{{ $produit->prix }} €</h4>
 			</div>
 			@endforeach

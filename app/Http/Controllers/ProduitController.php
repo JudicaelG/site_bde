@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Produit;
-use App\Image;
 
 class ProduitController extends Controller
 {
     public function index()
     {
-		$produits = Produit::get();
-		//$images = Image::find(1)->produit;
+		$produits = DB::table('produits')
+					->join('images', 'produits.id', '=', 'images.id_produit')
+					->get();
         return view('boutique.index')
 				->with(compact('produits', $produits));
-				//->with(compact('images', $images));
     }
 	
 	public function show($id)

@@ -59,4 +59,3 @@ Route::post('upload/{id}', 'UploadController@upload');
 
 //Route::get('file','ImageController@create');
 //Route::post('/images/store','ImageController@store');
-
