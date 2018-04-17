@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Participe;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,19 +12,12 @@ class CSVController extends Controller
 {
     public function csv($id)
     {
-
-        $participants = DB::table('users')
+        $participants = User::select('nom_de_famille','prenom','email')
             ->join('participes', 'users.id', '=', 'participes.id_utilisateur')
             ->where('id_evenement', $id)
-            ->get();
-
-
-        //$participants = User::get();
-        //echo $participants;
+            ->get(['users.*']);
         $csvExporter = new \Laracsv\Export();
         $csvExporter->build($participants, ['nom_de_famille', 'prenom', 'email']);
-        //$csv = $csvExporter->getCsv();
-        //echo $csv;
         return $csvExporter->download('participants.csv');
     }
 }
