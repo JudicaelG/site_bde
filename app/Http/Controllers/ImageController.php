@@ -82,6 +82,8 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $images = Image::findOrFail($id);
+        $images->delete();
+        return redirect('/evenement/');
     }
 }

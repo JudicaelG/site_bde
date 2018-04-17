@@ -17,12 +17,12 @@ Route::get('/boutique', 'BoutiqueController@index');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
+Route::resource('images','ImageController');
 
  Route::middleware('auth')->group(function(){
  	Route::resource('boiteidee','BoiteideeController');
  });
 
-Route::resource('images','ImageController');
 
 Route::resource('evenement/participe','ParticipeController');
 Route::post('evenement/{id}/participe','ParticipeController@store');

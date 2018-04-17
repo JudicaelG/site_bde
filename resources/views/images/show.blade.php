@@ -13,6 +13,11 @@
     <h1>{{ $images->alt }}</h1>
 
     <img src="{{ $images->lien }}" alt="{{$images->alt}}">
+    <form action="{{url('images', [$images->id])}}" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="submit" class="btn btn-danger" value="Supprimer l'image"/>
+    </form>
 		@salarie
 		<form action="" method="POST">
             <input type="hidden" name="_method" value="DELETE">
