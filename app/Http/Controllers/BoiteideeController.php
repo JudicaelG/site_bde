@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Aime_idee;
 use App\Boite_idee;
+use App\Evenement;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -65,4 +66,21 @@ class BoiteideeController extends Controller
         $idee->delete();
         return redirect('boiteidee');
     }
+
+
+ public function validation($id)
+    {
+        $evenement = new Evenement();
+        $idee = Boite_idee::findOrFail($id);
+        $evenement->titre = $idee->titre;
+        $evenement->description = $idee->description;
+        $evenement->id_utilisateur = \Auth::user()->id;
+        $evenement->save();
+        $idee->delete();
+        $idEvenement = Evenement::orderBy('created_at', 'desc')->where('id_utilisateur', \Auth::user()->id)->first()->id;
+        return redirect('evenement/'.$idEvenement.'/edit');
+
+    }
+
+
 }

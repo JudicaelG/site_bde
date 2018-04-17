@@ -31,11 +31,15 @@
             <input type="submit" class="btn btn-danger" value="Cette évenement peut nuire à l'image de l'école"/>
         </form>
 	@endsalarie
-        <form action="{{url('images/create')}}" method="GET">
-            <input type="hidden" name="_method" value="Ajout Image">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Ajout Image"/>
-        </form>
+        @if(\Auth::check())
+            @if(is_null($participes)===false)
+                <form action="{{url('images/create', [$evenements->id])}}" method="GET">
+                    <input type="hidden" name="_method" value="Ajout Image">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" class="btn btn-danger" value="Ajout Image"/>
+                </form>
+            @endif
+        @endif
     </div>
 		
 	
@@ -96,7 +100,7 @@
         @foreach($commentaires as $commentaire)
             <strong>Commentaire:</strong> {{ $commentaire->contenu }}<br>
 		@salarie
-			<form action="{{url('evenement', [$evenements])}}" method="POST">
+			<form action="{{url('evenement', [$evenements-> id])}}" method="POST">
             	<input type="hidden" name="_method" value="DELETE">
             	<input type="hidden" name="_token" value="{{ csrf_token() }}">
             	<input type="submit" class="btn btn-danger" value="Ce commentaire peut nuire à l'image de l'école"/>
@@ -107,7 +111,7 @@
     
     <div class="card">
         <div class="card-block">
-            <form method="POST" action="/evenement/{{$evenements}}">
+            <form method="POST" action="/evenement/{{$evenements-> id}}">
                 {{csrf_field()}}
                 <div class="form-group">
                     <textarea name="contenu" placeholder="ajoutez un commentaire!" class="form-control"></textarea>

@@ -29,7 +29,6 @@ class EvenementController extends Controller
     public function store()
     {
         $evenements = new Evenement();
-        $commentaires = new Commentaire();
         $this->validate(request(),[
             'titre' => 'required',
             'description' => 'required',
@@ -45,8 +44,6 @@ class EvenementController extends Controller
         $evenements->id_utilisateur = \Auth::user()->id;
         $evenements->save();
 
-
-
         return redirect('/evenement');
     }
 
@@ -58,7 +55,6 @@ class EvenementController extends Controller
         $images = Image::where('id_evenement', $id)->get();
         $dateDuJour = new \DateTime("now");
         $date = $dateDuJour->format("Y-m-d");
-        //echo \Auth::user()->id;
         if (\Auth::check()){
             $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
             $aimeEvenement = Aime_evenement::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->first();
@@ -93,4 +89,5 @@ class EvenementController extends Controller
         $evenements->delete();
         return redirect('evenement');
     }
+
 }

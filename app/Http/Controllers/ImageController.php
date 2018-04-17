@@ -22,9 +22,9 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('images.create');
+        return view('images.create', compact('id'));
     }
     /**
      * Store a newly created resource in storage.
@@ -34,18 +34,6 @@ class ImageController extends Controller
      */
     public function store()
     {
-        $img = new Image();
-        $img->alt= Input::get('name');
-        $img->id_utilisateur= \Auth::user()->id;
-        if (Input::hasFile('image')){
-            $file=Input::file('image');
-            $file->move(public_path().'/img',$file->getClientOriginalName());
-
-            $img->lien = $file->getClientOriginalName();
-        }
-
-        $img->save();
-        return redirect('/evenement');
     }
     /**
      * Display the specified resource.
@@ -94,6 +82,11 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $images = Image::findOrFail($id);
+        $images->delete();
+        $commentaires = Commentaire::where('id_image', $id)->delete();
+        $aimeImage = Aime_image::where('id_image', $id)->delete();
+
+        return redirect('/evenement/');
     }
 }

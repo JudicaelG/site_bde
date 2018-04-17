@@ -27,7 +27,7 @@ class CommentaireController extends Controller
         $commentaire->contenu= request('contenu');
         $commentaire->id_utilisateur= \Auth::user()->id;
         $commentaire->created_at =now();
-        $commentaire-> id_evenement= $id;
+        $commentaire->id_evenement= $id;
         $commentaire-> save();
         return back();
     }
