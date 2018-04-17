@@ -38,6 +38,13 @@
             <h3>Espace commentaire</h3>
             @foreach($commentaires as $commentaire)
                 <strong>Commentaire:</strong> {{ $commentaire->contenu }}<br>
+                @bde
+                <form action="{{url('commentaire', [$commentaire->id])}}" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" class="btn btn-danger" value="Delete"/>
+                </form>
+                @endbde
                 @salarie
                 <form action="" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
