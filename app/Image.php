@@ -10,4 +10,9 @@ class Image extends Model
             'alt',
             'id_utilisateur'
         ];
+	
+	public function produit()
+	{
+		return $this->belongsTo('App\Produit');
+	}
 }

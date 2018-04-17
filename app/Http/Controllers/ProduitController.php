@@ -12,7 +12,10 @@ class ProduitController extends Controller
     public function index()
     {
 		$produits = Produit::get();
-        return view('boutique.index', compact('produits', $produits));
+		//$images = Image::find(1)->produit;
+        return view('boutique.index')
+				->with(compact('produits', $produits));
+				//->with(compact('images', $images));
     }
 	
 	public function show($id)
