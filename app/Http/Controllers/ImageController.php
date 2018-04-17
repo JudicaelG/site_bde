@@ -84,6 +84,9 @@ class ImageController extends Controller
     {
         $images = Image::findOrFail($id);
         $images->delete();
+        $commentaires = Commentaire::where('id_image', $id)->delete();
+        $aimeImage = Aime_image::where('id_image', $id)->delete();
+
         return redirect('/evenement/');
     }
 }
