@@ -78,8 +78,6 @@ class BoiteideeController extends Controller
         $evenement->save();
         $idee->delete();
         $idEvenement = Evenement::orderBy('created_at', 'desc')->where('id_utilisateur', \Auth::user()->id)->first()->id;
-        $url = 'evenement/'.$idEvenement.'/edit';
-
         return redirect('evenement/'.$idEvenement.'/edit');
 
     }

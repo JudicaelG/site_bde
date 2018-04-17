@@ -33,11 +33,15 @@
             <input type="submit" class="btn btn-danger" value="Cette évenement peut nuire à l'image de l'école"/>
         </form>
 	@endsalarie
-        <form action="{{url('images/create', [$evenements->id])}}" method="GET">
-            <input type="hidden" name="_method" value="Ajout Image">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Ajout Image"/>
-        </form>
+        @if(\Auth::check())
+            @if(is_null($participes)===false)
+                <form action="{{url('images/create', [$evenements->id])}}" method="GET">
+                    <input type="hidden" name="_method" value="Ajout Image">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit" class="btn btn-danger" value="Ajout Image"/>
+                </form>
+            @endif
+        @endif
     </div>
 		
 	
