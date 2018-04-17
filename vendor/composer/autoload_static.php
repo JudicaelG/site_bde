@@ -16,6 +16,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -101,7 +102,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'C' => 
         array (
             'Cron\\' => 5,
-            'Carbon\\' => 7,
+            'Collective\\Html\\' => 16,
         ),
         'A' => 
         array (
@@ -264,14 +265,18 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
-        'Carbon\\' => 
+        'Collective\\Html\\' => 
         array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -318,6 +323,9 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'AimeIdeesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AimeIdeesTableSeeder.php',
         'AimeImagesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AimeImagesTableSeeder.php',
         'App\\Accueil' => __DIR__ . '/../..' . '/app/Accueil.php',
+        'App\\Aime_evenement' => __DIR__ . '/../..' . '/app/Aime_evenement.php',
+        'App\\Aime_idee' => __DIR__ . '/../..' . '/app/Aime_idee.php',
+        'App\\Aime_image' => __DIR__ . '/../..' . '/app/Aime_image.php',
         'App\\Boite_idee' => __DIR__ . '/../..' . '/app/Boite_idee.php',
         'App\\Boutique' => __DIR__ . '/../..' . '/app/Boutique.php',
         'App\\Commentaire' => __DIR__ . '/../..' . '/app/Commentaire.php',
@@ -325,6 +333,9 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'App\\Evenement' => __DIR__ . '/../..' . '/app/Evenement.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AccueilController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccueilController.php',
+        'App\\Http\\Controllers\\Aime_evenementController' => __DIR__ . '/../..' . '/app/Http/Controllers/Aime_evenementController.php',
+        'App\\Http\\Controllers\\Aime_ideeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Aime_ideeController.php',
+        'App\\Http\\Controllers\\Aime_imageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Aime_imageController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -332,6 +343,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'App\\Http\\Controllers\\BoiteideeController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoiteideeController.php',
         'App\\Http\\Controllers\\BoutiqueController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoutiqueController.php',
         'App\\Http\\Controllers\\CommentaireController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentaireController.php',
+        'App\\Http\\Controllers\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EvenementController' => __DIR__ . '/../..' . '/app/Http/Controllers/EvenementController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
@@ -345,7 +357,9 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\ContactFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ContactFormRequest.php',
         'App\\Image' => __DIR__ . '/../..' . '/app/Image.php',
+        'App\\Mail\\ConctatEmail' => __DIR__ . '/../..' . '/app/Mail/ConctactEmail.php',
         'App\\Participe' => __DIR__ . '/../..' . '/app/Participe.php',
         'App\\Post' => __DIR__ . '/../..' . '/app/Post.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -360,6 +374,13 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'CategorieProduitsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategorieProduitsTableSeeder.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'CommandesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CommandesTableSeeder.php',
         'CommentairesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CommentairesTableSeeder.php',
         'ContientProduitsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ContientProduitsTableSeeder.php',
@@ -1769,6 +1790,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -3665,6 +3687,7 @@ class ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit8dab9d09f2ec64e0d4753d198d640c10::$classMap;
 

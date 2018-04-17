@@ -44,3 +44,8 @@ Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 //test image
 Route::get('file','ImageController@create');
 Route::post('/images/store','ImageController@store');
+
+
+//Route pour prévenir que certaines choses peuvent nuire à l'image de l'école
+Route::get('contact', 'ContactController@create')->name('contact.create');
+Route::post('contact', 'ContactController@store')->name('contact.store');
