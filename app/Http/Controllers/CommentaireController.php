@@ -59,6 +59,8 @@ class CommentaireController extends Controller
 
     public function destroy($id)
     {
-
+        $commentaire = Commentaire::findOrFail($id);
+        $commentaire->delete();
+        return back();
     }
 }

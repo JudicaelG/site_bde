@@ -42,6 +42,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
 Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
+Route::delete('/commentaire/{id}', 'CommentaireController@destroy');
 Route::get('/images/create/{id}', 'ImageController@create');
 
 //test image
