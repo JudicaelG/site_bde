@@ -42,7 +42,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/evenement/{id}', 'CommentaireController@addCommentaire');
 Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
+Route::get('/images/create/{id}', 'ImageController@create');
 
 //test image
-Route::get('file','ImageController@create');
-Route::post('/images/store','ImageController@store');
+Route::post('upload/{id}', 'UploadController@upload');
+
+//Route::get('file','ImageController@create');
+//Route::post('/images/store','ImageController@store');

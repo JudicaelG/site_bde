@@ -23,8 +23,8 @@
         </div>
     @endif
 
-    <h3 class="jumbotron">Laravel Multiple File Upload</h3>
-    <form method="post" action="store" enctype="multipart/form-data">
+    <h3 class="jumbotron">File Upload</h3>
+    <form method="post" action="{{URL::to('upload', [$id])}}" enctype="multipart/form-data">
         {{csrf_field()}}
         <label for="name">name</label>
         <input type="text" name="name"><br>
