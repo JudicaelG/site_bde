@@ -26,9 +26,6 @@
         <div id="encre_idee">
             <a href="boiteidee/create"> Ajouter une idée</a>
         </div>
-        <div id="idee">
-            <? //include("displayIdee");?>
-        </div>
 
 
     </div>

@@ -21,6 +21,13 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="submit" class="btn btn-danger" value="Delete"/>
     </form>
+
+    <form method="POST" action="/boiteidee/{{$idee->id}}/validation">
+        {{csrf_field()}}
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" value="Valider">Valider cette idée</button>
+        </div>
+    </form>
 	@endbde
 
     <div class="jumbotron text-center">

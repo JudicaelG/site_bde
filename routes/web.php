@@ -33,6 +33,8 @@ Route::post('boiteidee/{id}/aime','Aime_ideeController@store');
 Route::resource('images/aime','Aime_imageController');
 Route::post('images/{id}/aime','Aime_imageController@store');
 
+Route::post('boiteidee/{id}/validation', 'BoiteideeController@validation');
+
 
 Auth::routes();
 
