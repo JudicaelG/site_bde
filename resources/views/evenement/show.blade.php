@@ -25,6 +25,18 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="btn btn-danger" value="Delete"/>
         </form>
+
+        <form action="{{url('evenement', [$evenements->id])}}/pdf" method="GET">
+            <input type="hidden" name="_method" value="Recuperer la liste des partipants en pdf">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="btn btn-danger" value="Recuperer la liste des partipants en pdf"/>
+        </form>
+
+        <form action="{{url('evenement', [$evenements->id])}}/csv" method="GET">
+            <input type="hidden" name="_method" value="Recuperer la liste des partipants en csv">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="btn btn-danger" value="Recuperer la liste des partipants en csv"/>
+        </form>
 	@endbde
 	@salarie
 		<form action="{{ url ('contact')}}">
