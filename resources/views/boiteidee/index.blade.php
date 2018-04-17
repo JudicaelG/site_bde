@@ -15,12 +15,12 @@
         <img src="http://www.cointe.be/bailogo.png" id="imgBoiteidee">
 
         @foreach($idees as $idee)
-            <div class="blog-post">
+            <article class="idee-post">
 
-                    <h2 class="blog-post-title"><a href="/boiteidee/<?php echo $idee->id?>" >{{$idee->titre}}</a></h2>
+                    <h2 class="idee-post-title"><a href="/boiteidee/<?php echo $idee->id?>" >{{$idee->titre}}</a></h2>
 
                 <p>{{$idee->description}}</p>
-            </div>
+            </article>
         @endforeach
 	
         <div id="encre_idee">

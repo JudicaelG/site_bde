@@ -3,18 +3,23 @@
     height: 100px;
     background-color: grey;
     opacity: 0.7;
+    display: flex;
 }
 
 .localisation{
-    float: left;
-    width: 50%;
+    width: 33%;
     text-align: center;
     margin-top: 20px;
 }
 
 .copy{
-    float: right;
     text-align: center;
-    width: 50%;
+    width: 33%;
+    margin-top: 20px;
+}
+.reseau{
+    width: 33%;
+    text-align: center;
+    opacity: 1;
     margin-top: 20px;
 }
