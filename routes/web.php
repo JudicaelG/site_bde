@@ -13,7 +13,7 @@
 
 Route::get('/', 'AccueilController@index');
 
-Route::get('/boutique', 'BoutiqueController@index');
+Route::resource('boutique', 'ProduitController');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
@@ -45,7 +45,17 @@ Route::post('/images/{id}', 'CommentaireController@addCommentaireImg');
 Route::get('/images/create/{id}', 'ImageController@create');
 
 //test image
+
+Route::get('file','ImageController@create');
+Route::post('/images/store','ImageController@store');
+
+
+//Route pour prévenir que certaines choses peuvent nuire à l'image de l'école
+Route::get('contact', 'ContactController@create')->name('contact.create');
+Route::post('contact', 'ContactController@store')->name('contact.store');
+
 Route::post('upload/{id}', 'UploadController@upload');
 
 //Route::get('file','ImageController@create');
 //Route::post('/images/store','ImageController@store');
+
