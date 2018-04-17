@@ -67,7 +67,8 @@ class BoiteideeController extends Controller
         return redirect('boiteidee');
     }
 
-    public function validation($id)
+
+ public function validation($id)
     {
         $evenement = new Evenement();
         $idee = Boite_idee::findOrFail($id);
@@ -77,7 +78,11 @@ class BoiteideeController extends Controller
         $evenement->save();
         $idee->delete();
         $idEvenement = Evenement::orderBy('created_at', 'desc')->where('id_utilisateur', \Auth::user()->id)->first()->id;
+        $url = 'evenement/'.$idEvenement.'/edit';
+
         return redirect('evenement/'.$idEvenement.'/edit');
 
     }
+
+
 }

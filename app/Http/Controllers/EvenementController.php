@@ -90,8 +90,4 @@ class EvenementController extends Controller
         return redirect('evenement');
     }
 
-    public function validation()
-    {
-
-    }
 }
