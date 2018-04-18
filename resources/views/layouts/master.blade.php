@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Le site du bde</title>
 
+  @yield('head')
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/styleAccueil.css')}}" rel="stylesheet">

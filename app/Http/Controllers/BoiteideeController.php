@@ -76,8 +76,14 @@ class BoiteideeController extends Controller
         $evenement->description = $idee->description;
         $evenement->id_utilisateur = \Auth::user()->id;
         $evenement->save();
-        $idee->delete();
+        $email = User::select('email')
+            ->where('id', $idee->id_utilisateur)
+            ->first();
         $idEvenement = Evenement::orderBy('created_at', 'desc')->where('id_utilisateur', \Auth::user()->id)->first()->id;
+
+
+        \Mail::to($email)->send(new ValidationEmail($idee));
+        $idee->delete();
         return redirect('evenement/'.$idEvenement.'/edit');
 
     }
