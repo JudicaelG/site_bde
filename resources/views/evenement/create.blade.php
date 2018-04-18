@@ -3,7 +3,7 @@
 @section ('header')
 
     <header>
-        <h1>Evenement</h1>
+        <h1>Évènement du BDE</h1>
     </header>
 
 @endsection
