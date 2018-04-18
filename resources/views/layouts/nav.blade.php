@@ -16,7 +16,7 @@
 		@if(\Request::is('boutique')){
 		<li>
             <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search">
+                <input class="form-control" type="text" placeholder="Recherche">
             </form>
         </li>
 		@endif

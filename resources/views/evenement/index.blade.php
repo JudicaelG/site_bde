@@ -13,7 +13,7 @@
     <div id="evenement">
 
         <div class="future">
-            <h3>Futurs événements:</h3>
+            <h3>Futurs évènements:</h3>
 
             @foreach($evenements as $evenement)
                 @if($evenement->date_evenement >= $date)
@@ -27,7 +27,7 @@
         </div>
 
         <div class="passer">
-            <h3>Evénements passés:</h3>
+            <h3>Évènements passés:</h3>
 
             @foreach($evenements as $evenement)
                 @if($evenement->date_evenement < $date)
@@ -43,7 +43,7 @@
 	
 	@bde
     <div id="ajout_evenement">
-        <a href="evenement/create"> Ajouter un evenement</a>
+        <a href="evenement/create"> Ajouter un évènement</a>
     </div>
 	@endbde
 
