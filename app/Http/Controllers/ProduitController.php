@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Produit;
 use App\Image;
+use App\Categorie_produit;
 
 class ProduitController extends Controller
 {
@@ -36,28 +37,32 @@ class ProduitController extends Controller
     }
 
     public function create(){
-        return view('boutique.create');
+        $categories = Categorie_produit::get();
+        return view('boutique.create', compact('categories'));
     }
 
     public function ajouterProduit(){
 
-        $produit = new Evenement();
+        $produit = new Produit();
         $this->validate(request(),[
             'titre' => 'required',
             'description' => 'required',
-            'date_evenement' => 'required',
             'prix' => 'required',
-            'recurrence' => 'required',
+            'id_categorie' => 'requiered'
         ]);
-        $evenements->titre = request('titre');
-        $evenements->description = request('description');
-        $evenements->date_evenement = request('date_evenement');
-        $evenements->prix = request('prix');
-        $evenements->recurrence = request('recurrence');
-        $evenements->id_utilisateur = \Auth::user()->id;
-        $evenements->save();
+        $produit->titre = request('titre');
+        $produit->description = request('description');
+        $produit->prix = request('prix');
 
-        return redirect('/evenement');
+        $nomCategorie = request('categorie');
+        $idCategorie = Categorie_produit::select('id')
+                ->where('nom', $nomCategorie)
+                ->first();
+
+        $produit->id_categorie = $idCategorie->id;
+        $produit->save();
+
+        return redirect('/boutique');
 
     }
 
