@@ -2,7 +2,7 @@
 
 @section ('head')
 
-    <title>Évènement</title>
+    <title>Évènements</title>
 
 @endsection
 
