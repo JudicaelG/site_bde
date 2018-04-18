@@ -2,9 +2,12 @@
 
 @section ('header')
 
-    <header>
-        <h1>Boutique</h1>
-    </header>
+	<header>
+		<div class="header_img">
+			<img src="/img/headerFond.png" alt="Image fond" >
+			<h1>Boutique</h1>
+		</div>
+	</header>
 
 @endsection
 

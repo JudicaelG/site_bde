@@ -3,13 +3,16 @@
 @section ('header')
 
     <header>
-        <h1>Boite à idée BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>{{ $idee->titre }}</h1>
+        </div>
     </header>
 
 @endsection
 
 @section ('content')
-    <h1> {{ $idee->titre }}</h1>
+
 	
 	@bde
     <form action="{{url('boiteidee', [$idee->id])}}/edit" method="GET">

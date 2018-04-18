@@ -3,7 +3,10 @@
 @section ('header')
 
     <header>
-        <h1>Évènement du BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>Evènement</h1>
+        </div>
     </header>
 
 @endsection

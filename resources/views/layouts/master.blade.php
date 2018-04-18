@@ -25,7 +25,9 @@
 </head>
 <body>
 
+
     @yield ('header')
+
 
     @include ('layouts.nav')
 

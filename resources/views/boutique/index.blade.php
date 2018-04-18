@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
 @section ('header')
-
     <header>
-        <h1>Boutique BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>Boutique</h1>
+        </div>
     </header>
 
 @endsection

@@ -2,9 +2,12 @@
 
 @section ('header')
 
-    <header>
-        <h1>Envoyer un mail au BDE</h1>
-    </header>
+	<header>
+		<div class="header_img">
+			<img src="/img/1440.png" alt="Image fond" >
+			<h1>Envoie mail BDE</h1>
+		</div>
+	</header>
 
 @endsection
 

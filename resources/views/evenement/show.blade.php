@@ -3,15 +3,15 @@
 @section ('header')
 
     <header>
-        <h1>Évènement du BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>{{ $evenements->titre }}</h1>
+        </div>
     </header>
 
 @endsection
 
 @section ('content')
-
-
-    <h1> {{ $evenements->titre }}</h1>
 	
 	
     <div id="boutons">
@@ -41,7 +41,7 @@
 	@salarie
         <form action="{{url('evenement/contact', [$evenements-> id])}}" method="POST">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Cet évènement peut nuire à l'image de l'école"/>
+            <input type="submit" class="btn btn-danger" value="Cet event peut nuire à l'image de l'école"/>
         </form>
 	@endsalarie
         @if(\Auth::check())
@@ -168,7 +168,7 @@
             <form action="/evenement/aime/{{$evenements->id}}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet évènement"/>
+                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet évenement"/>
             </form>
 
         @endif
@@ -177,7 +177,7 @@
             <form method="POST" action="/evenement/{{$evenements->id}}/aime">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cet évènement</button>
+                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cet Evenement</button>
                 </div>
             </form>
         @endif

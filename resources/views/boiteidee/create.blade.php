@@ -3,7 +3,10 @@
 @section ('header')
 
     <header>
-        <h1>Boite à idée BDE</h1>
+        <div class="header_img">
+            <img src="/img/HeaderFond.png" alt="Image fond" >
+            <h1>Boite à idée</h1>
+        </div>
     </header>
 
 @endsection
