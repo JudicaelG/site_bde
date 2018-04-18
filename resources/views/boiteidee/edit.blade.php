@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Modifier une image</title>
+
+@endsection
+
 @section ('header')
 
     <header>

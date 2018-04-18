@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Évènement</title>
+
+@endsection
+
 @section ('header')
 
     <header>

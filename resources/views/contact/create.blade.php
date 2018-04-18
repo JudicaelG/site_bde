@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+	<title></title>
+
+@endsection
+
 @section ('header')
 
 	<header>

@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Ajouter un produit à la boutique</title>
+
+@endsection
+
 @section ('header')
 
     <header>
