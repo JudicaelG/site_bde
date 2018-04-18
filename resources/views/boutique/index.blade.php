@@ -26,12 +26,12 @@
 		{{ $meilleursproduits }}
         <div class="imgMeilleuresVentes">
 			@foreach($meilleursproduits as $meilleurvente)
-					@if({{ @meilleurvente->produit_count > 1 }})
+					
 					<div class="produits">
 						<h4>{{ $meilleurvente->titre }}</h4>
 						<img src="{{$meilleurvente->lien}}" alt="{{ $meilleurvente->alt}}">
 					</div>
-					@endif
+					
 			@endforeach
             
         </div>
