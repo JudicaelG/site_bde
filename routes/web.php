@@ -55,6 +55,10 @@ Route::post('/images/store','ImageController@store');
 Route::get('contact', 'ContactController@create')->name('contact.create');
 Route::post('contact', 'ContactController@store')->name('contact.store');
 
+Route::post('/evenement/contact/{id}', 'AvertissementNuisanceController@evenement');
+Route::post('/image/contact/{id}', 'AvertissementNuisanceController@image');
+Route::post('/commentaire/contact/{id}', 'AvertissementNuisanceController@commentaire');
+
 Route::post('upload/{id}', 'UploadController@upload');
 
 //Route::get('file','ImageController@create');
