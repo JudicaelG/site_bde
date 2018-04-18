@@ -20,9 +20,9 @@ class ProduitController extends Controller
 							->select(DB::raw("COUNT(contient_produits.id_produit) as nombre"))
 							->join('produits', 'contient_produits.id_produit', '=', 'produits.id')
 							->join('images', 'produits.id', '=', "images.id_produit")
-							->where('produits.id', '=', 'contient_produits.id_produit')
-							->groupBy(DB::raw("contient_produits.id_produit"))
-							->get();
+							->groupBy('contient_produits.id_produit')
+							->where('contient_produits.id_produit', '=', 'produits.id')
+							->first();
 		
         return view('boutique.index')
 				->with(compact('produits', $produits))
