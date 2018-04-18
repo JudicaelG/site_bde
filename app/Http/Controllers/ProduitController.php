@@ -17,12 +17,12 @@ class ProduitController extends Controller
 					->join('categorie_produits', 'produits.id_categorie', '=', 'categorie_produits.id')
 					->get();
 		
-		$meilleursproduits = DB::table('contient_produits')
+		$meilleursproduits = DB::table('produits')
+							->join('images', 'produits.id', '=', 'images.id_produit')
 							->distinct()
-							->select(DB::raw('COUNT(contient_produits.id_produit) as total'))
-							->join('produits', 'contient_produits.id_produit', '=', 'produits.id')
-							->join('images', 'produits.id', '=', 'images.id_produit')							
-							->select('produits.titre', 'images.lien', 'images.alt')
+							->join('contient_produits', 'produits.id', '=', 'contient_produits.id_produit')							
+							->select('produits.titre', 'images.', 'contient_produits.id_produit', \DB::raw('count(*) as produit_count'))
+							->groupBy('contient_produits.id_produit')							
 							->get();
 		
         return view('boutique.index')
