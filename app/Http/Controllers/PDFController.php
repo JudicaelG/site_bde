@@ -18,7 +18,7 @@ class PDFController extends Controller
                             ->join('participes', 'users.id', '=', 'participes.id_utilisateur')
                             ->where('id_evenement', $id)
                             ->get();
-        $pdf = PDF::loadView('invoice', compact('participants'));
+        $pdf = PDF::loadView('pdf.pdf', compact('participants'));
         return $pdf->download('participants.pdf');
     }
 }

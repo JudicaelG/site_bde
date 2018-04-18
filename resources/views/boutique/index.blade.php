@@ -34,7 +34,7 @@
         <div class="imgMeilleuresVentes">
 			@foreach($produits as $produit)
             <div class="produits">
-				<h2 class="blog-post"><a href="/boutique/<?php echo $produit->id?>">{{ $produit->titre }}</a></h2>
+				<h2 class="blog-post"><a href="/boutique/{{$produit->id_produit}}">{{ $produit->titre }}</a></h2>
 				<h5>{{ $produit->nom }}</h5>
 				<h4>{{ $produit->description }}</h4>
 				<img src="{{$produit->lien}}" alt="{{ $produit->alt}}">
