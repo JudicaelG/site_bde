@@ -83,5 +83,35 @@ class UsersTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
+        DB::table('users')->insert(
+            [
+                'nom_de_famille' => 'Oliech',
+                'prenom' => 'Pierre',
+                'email' => 'etudiant.etudiant@viacesi.fr',
+                'password' => '$2y$10$WD2fKNSLR6vYKXoSTwksL.sQ7D3AZ8e.2XtsvuazE/OgAflYxyXcC',
+                'id_statut' => '1',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('users')->insert(
+            [
+                'nom_de_famille' => 'Pavel',
+                'prenom' => 'Jean',
+                'email' => 'salarie.salarie@viacesi.fr',
+                'password' => '$2y$10$UqUuMUVNtOEhwH0Ywh33IeYmrIO.PJn0E3Tul4GhMdp/2JL2tsKqi',
+                'id_statut' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('users')->insert(
+            [
+                'nom_de_famille' => 'Torlk',
+                'prenom' => 'Benjamin',
+                'email' => 'bde.bde@viacesi.fr',
+                'password' => '$2y$10$l5Br9pVpiho55L0.on2xdeJqIqrRQrJHfJfDk0VVwBynr0ZpbZU/S',
+                'id_statut' => '3',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
     }
 }
