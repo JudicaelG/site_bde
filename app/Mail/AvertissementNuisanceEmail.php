@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable
+class AvertissementNuisanceEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,9 +16,9 @@ class ContactEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($contact)
+    public function __construct()
     {
-       $this->contact = $contact;
+        //
     }
 
     /**
@@ -28,8 +28,6 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->to(config('dbf79f7b15-2f4ba1@inbox.mailtrap.io'))
-					->subject('Un évenement/image/commentaire peut nuire à l\'image de l\'école')
-					->view('emails.contact');
+        return $this->view('view.name');
     }
 }

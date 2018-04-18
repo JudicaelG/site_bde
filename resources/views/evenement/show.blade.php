@@ -39,8 +39,9 @@
         </form>
 	@endbde
 	@salarie
-		<form action="{{ url ('contact')}}">
-            <input type="submit" class="btn btn-danger" value="Cette évenement peut nuire à l'image de l'école"/>
+        <form action="{{url('evenement/contact', [$evenements-> id])}}" method="POST">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="submit" class="btn btn-danger" value="Cet event peut nuire à l'image de l'école"/>
         </form>
 	@endsalarie
         @if(\Auth::check())
@@ -111,20 +112,19 @@
         <h3>Espace commentaire</h3>
         @foreach($commentaires as $commentaire)
             <strong>Commentaire:</strong> {{ $commentaire->contenu }}<br>
-        @bde
-            <form action="{{url('commentaire', [$commentaire->id])}}" method="POST">
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Delete"/>
-            </form>
-        @endbde
-		@salarie
-			<form action="{{url('evenement', [$evenements-> id])}}" method="POST">
-            	<input type="hidden" name="_method" value="DELETE">
-            	<input type="hidden" name="_token" value="{{ csrf_token() }}">
-            	<input type="submit" class="btn btn-danger" value="Ce commentaire peut nuire à l'image de l'école"/>
-        	</form>
-	@endsalarie
+                @bde
+                    <form action="{{url('commentaire', [$commentaire->id])}}" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="submit" class="btn btn-danger" value="Delete"/>
+                    </form>
+                @endbde
+                @salarie
+                    <form action="{{url('commentaire/contact', [$commentaire-> id])}}" method="POST">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="submit" class="btn btn-danger" value="Ce commentaire peut nuire à l'image de l'école"/>
+                    </form>
+                @endsalarie
         @endforeach
     </div>
     
@@ -133,7 +133,7 @@
             <form method="POST" action="/evenement/{{$evenements-> id}}">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <textarea name="contenu" placeholder="ajoutez un commentaire!" class="form-control"></textarea>
+                    <textarea name="contenu" placeholder="Ajoutez un commentaire!" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Commenter</button>

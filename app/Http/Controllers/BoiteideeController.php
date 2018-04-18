@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Aime_idee;
 use App\Boite_idee;
 use App\Evenement;
+use App\Mail\ValidationEmail;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

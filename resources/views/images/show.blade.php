@@ -21,11 +21,10 @@
     </form>
     @endbde
 		@salarie
-		<form action="" method="POST">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Cette évenement peut nuire à l'image de l'école"/>
-        </form>
+            <form action="{{url('image/contact', [$images-> id])}}" method="POST">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" class="btn btn-danger" value="Cette image peut nuire à l'image de l'école"/>
+            </form>
 		@endsalarie
 
 
@@ -49,7 +48,7 @@
                 <form action="" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="submit" class="btn btn-danger" value="Cette évenement peut nuire à l'image de l'école"/>
+                    <input type="submit" class="btn btn-danger" value="Ce commentaire peut nuire à l'image de l'école"/>
                 </form>
                 @endsalarie
             @endforeach

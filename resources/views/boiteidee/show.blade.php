@@ -3,7 +3,7 @@
 @section ('header')
 
     <header>
-        <h1>Boite Idee</h1>
+        <h1>Boite à idée BDE</h1>
     </header>
 
 @endsection

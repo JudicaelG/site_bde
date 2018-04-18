@@ -3,7 +3,7 @@
 @section ('header')
 
     <header>
-        <h1>Boite A Idee BDE</h1>
+        <h1>Boite à idée BDE</h1>
     </header>
 
 @endsection
@@ -11,15 +11,15 @@
 @section ('content')
 
     <div id="ajout_idee">
-        <h3>Ajout d'une idée à la Boite</h3>
+        <h3>Ajout d'une idée à la boite</h3>
         <form method="POST" action="/boiteidee" >
             {{csrf_field()}}
             <div class="form-group">
-                <label for="titre">Titre de l'idee</label>
+                <label for="titre">Titre de l'idée</label>
                 <input type="text" class="form-control" id="ideeTitre" name="titre">
             </div>
             <div class="form-group">
-                <label for="description">Description de l'idee</label>
+                <label for="description">Description de l'idée</label>
                 <textarea class="form-control" id="ideeDescription" name="description"></textarea>
             </div>
             <div class="form-group">

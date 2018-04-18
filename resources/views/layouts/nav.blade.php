@@ -2,21 +2,21 @@
 
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="/accueil">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/accueil">Page d'accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/evenement">Evenement <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/evenement">Évènements <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="/boutique">Boutique <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/boiteidee">Boite a idee <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/boiteidee">Boite à idée <span class="sr-only">(current)</span></a>
         </li>
 		@if(\Request::is('boutique')){
 		<li>
             <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search">
+                <input class="form-control" type="text" placeholder="Recherche">
             </form>
         </li>
 		@endif

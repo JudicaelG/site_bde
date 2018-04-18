@@ -32,7 +32,7 @@
 				<h5>{{ $produit->nom }}</h5>
 				<h4>{{ $produit->description }}</h4>
 				<img src="{{$produit->lien}}" alt="{{ $produit->alt}}">
-				<h4>Prix :{{ $produit->prix }} €</h4>
+				<h4>Prix : {{ $produit->prix }} €</h4>
 			</div>
 			@endforeach
         </div>
