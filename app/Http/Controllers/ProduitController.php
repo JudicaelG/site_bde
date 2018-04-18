@@ -23,7 +23,7 @@ class ProduitController extends Controller
 							->join('images', 'produits.id', '=', 'images.id_produit')
 							->distinct()
 							->join('contient_produits', 'produits.id', '=', 'contient_produits.id_produit')							
-							->select('produits.titre', 'images.', 'contient_produits.id_produit', \DB::raw('count(*) as produit_count'))
+							->select('produits.titre', 'contient_produits.id_produit', \DB::raw('count(*) as produit_count'))
 							->groupBy('contient_produits.id_produit')							
 							->get();
 		
