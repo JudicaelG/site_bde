@@ -16,7 +16,7 @@
 			@foreach($meilleurventes as $meilleurvente)
             <div class="produits">
 				<h4>{{ $meilleurvente->titre }}</h4>
-				<img src="{{$meilleurvente->lien}}" alt="{{ $meilleurvente->alt}}">
+				<img src="{{ $meilleurvente->lien }}" alt="{{ $meilleurvente->alt }}">
 			</div>
 			@endforeach
         </div>
