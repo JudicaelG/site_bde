@@ -34,7 +34,33 @@ class ProduitController extends Controller
 		
 			
     }
-	
+
+    public function create(){
+        return view('boutique.create');
+    }
+
+    public function ajouterProduit(){
+
+        $produit = new Evenement();
+        $this->validate(request(),[
+            'titre' => 'required',
+            'description' => 'required',
+            'date_evenement' => 'required',
+            'prix' => 'required',
+            'recurrence' => 'required',
+        ]);
+        $evenements->titre = request('titre');
+        $evenements->description = request('description');
+        $evenements->date_evenement = request('date_evenement');
+        $evenements->prix = request('prix');
+        $evenements->recurrence = request('recurrence');
+        $evenements->id_utilisateur = \Auth::user()->id;
+        $evenements->save();
+
+        return redirect('/evenement');
+
+    }
+
 	public function show($id)
 	{
 		$produits = Produit::find($id);
@@ -107,3 +133,5 @@ class ProduitController extends Controller
         return back();
     }
 }
+
+
