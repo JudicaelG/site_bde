@@ -43,5 +43,10 @@
 			@endforeach
         </div>
     </div>
+    <div >
+        <div id="boutonBoutique">
+            <a href="boutique/create">Ajouter un produit</a>
+        </div>
+    </div>
 
 @endsection

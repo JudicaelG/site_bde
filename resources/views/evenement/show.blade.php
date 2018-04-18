@@ -116,7 +116,7 @@
                     <form action="{{url('commentaire', [$commentaire->id])}}" method="POST">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="submit" class="btn btn-danger" value="Delete"/>
+                        <input type="submit" class="btn btn-danger" value="Supprimer"/>
                     </form>
                 @endbde
                 @salarie
@@ -133,11 +133,14 @@
             <form method="POST" action="/evenement/{{$evenements-> id}}">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <textarea name="contenu" placeholder="Ajoutez un commentaire!" class="form-control"></textarea>
+                    <textarea name="contenu" placeholder="Ajoutez un commentaire!" class="form-control" required></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Commenter</button>
                 </div>
+
+                @include('layouts.errors')
+
             </form>
         </div>
     </div>
@@ -168,7 +171,7 @@
             <form action="/evenement/aime/{{$evenements->id}}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet évenement"/>
+                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet évènement"/>
             </form>
 
         @endif
@@ -177,7 +180,7 @@
             <form method="POST" action="/evenement/{{$evenements->id}}/aime">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cet Evenement</button>
+                    <button type="submit" class="btn btn-primary" value="Aime">J'aime cet évènement</button>
                 </div>
             </form>
         @endif
