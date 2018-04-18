@@ -6,7 +6,7 @@
 <body>
 
     <p>
-        Votre idee a ete selectionne
+        Votre idee a été selectionnée.
     </p>
 </ul>
 </body>
