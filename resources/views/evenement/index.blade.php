@@ -11,7 +11,7 @@
     <header>
         <div class="header_img">
             <img src="/img/headerFond.png" alt="Image fond" >
-            <h1>Evènement</h1>
+            <h1>Évènement</h1>
         </div>
     </header>
 
