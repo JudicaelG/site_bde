@@ -29,7 +29,7 @@
 						<h4>{{ $meilleurvente->titre }}</h4>
 					</div>
 			@endforeach
-			
+            
         </div>
     </div>
 
