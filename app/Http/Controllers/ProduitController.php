@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Commande;
 use App\Contient_produit;
+use App\Mail\CommandeEmail;
+use App\Mail\ValidationEmailCommande;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -157,6 +160,71 @@ class ProduitController extends Controller
             $contientProduits->save();
         }
         return back();
+    }
+
+    public function voirPanier()
+    {
+        if(\Auth::check()) {
+            $commande = Commande::
+            where('id_utilisateur', \Auth::user()->id)
+                ->where('etat_commande', 'En commande')
+                ->first();
+            if (is_null($commande)===false) {
+                $contientProduits = Contient_produit::where('id_commande', $commande->id)
+                    ->get();
+                $nomProduits = Produit::join('contient_produits', 'produits.id', '=', 'contient_produits.id_produit')
+                    ->where('id_commande', $commande->id)
+                    ->get();;
+                return view('boutique.panier')
+                    ->with(compact('commande'))
+                    ->with(compact('nomProduits'));
+            }
+            if (is_null($commande)===true){
+                return view('boutique.panierVide');
+            }
+        }
+        else
+        {
+            return redirect('/boutique');
+        }
+    }
+
+    public function passerCommande()
+    {
+        $idCommande = request('id_commande');
+        $commande = Commande::findOrFail($idCommande);
+        $commande->etat_commande = "Passe";
+        $commande->save();
+        $email = User::select('email')
+            ->where('id', $commande->id_utilisateur)
+            ->first();
+        \Mail::to($email)->send(new CommandeEmail($commande,$commande->id_utilisateur));
+
+        return redirect('boutique');
+    }
+
+    public function validerCommande()
+    {
+        $idCommande = request('id_commande');
+        $commande = Commande::findOrFail($idCommande);
+        $commande->etat_commande = "Valide";
+        $commande->save();
+
+        $email = User::select('email')
+            ->where('id', $commande->id_utilisateur)
+            ->first();
+        \Mail::to($email)->send(new ValidationEmailCommande($commande,$commande->id_utilisateur));
+
+        $commandes = Commande::get();
+        return view('boutique.indexValidation')
+            ->with(compact('commandes'));
+    }
+
+    public function indexValidationCommande()
+    {
+        $commandes = Commande::get();
+        return view('boutique.indexValidation')
+            ->with(compact('commandes'));
     }
 }
 

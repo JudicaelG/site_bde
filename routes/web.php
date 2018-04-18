@@ -14,6 +14,10 @@
 Route::get('/', 'AccueilController@index');
 
 Route::resource('boutique', 'ProduitController');
+Route::post('boutique/panier', 'ProduitController@voirPanier');
+Route::post('boutique/panier/passer', 'ProduitController@passerCommande');
+Route::post('boutique/panier/valider', 'ProduitController@validerCommande');
+Route::post('boutique/validationcommande', 'ProduitController@indexValidationCommande');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
