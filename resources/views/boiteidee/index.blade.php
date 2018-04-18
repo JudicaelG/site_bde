@@ -12,7 +12,6 @@
 
     <div id="corps">
 
-        <img src="http://www.cointe.be/bailogo.png" id="imgBoiteidee">
 
         @foreach($idees as $idee)
             <article class="idee-post">
@@ -23,7 +22,7 @@
             </article>
         @endforeach
 	
-        <div id="encre_idee">
+        <div id="boite_idee">
             <a href="boiteidee/create"> Ajouter une idée</a>
         </div>
 

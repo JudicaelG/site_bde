@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-#encre_idee a {
+#boite_idee a {
     text-decoration: none;
     display: block;
     background-color: red;
@@ -13,31 +13,18 @@
     border: none;
     cursor: pointer;
     width: 150px;
-    z-index: 1;
+    margin-left: 10px;
 }
 
-#encre_idee a:hover {
+#boite_idee a:hover {
     opacity: 0.8;
 }
 
-#ajout_idee{
-    background-color: grey;
-    padding: 10px;
+.idee-post{
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 16px;
 }
-input[type=text], textarea {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-.blog-post{
-    margin: 2% 5% 2% 5%;
-    /*background: #1c7430;
-*/}
 
 #imgBoiteidee{
     float: right;
