@@ -21,7 +21,7 @@
         <div class="imgMeilleuresVentes">
 			@foreach($meilleursproduits as $meilleurvente)
 					<div class="produits">
-						<h4>{{ $meilleurvente->titre }}</h4>
+						<h4>{{ $meilleurvente->prix }}</h4>
 					</div>
 			@endforeach
 			
