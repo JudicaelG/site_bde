@@ -10,6 +10,12 @@
 
 @section ('content')
 
+    <div class="texte_evenement">
+        <h2>Bienvenue dans la partie évènement</h2>
+        <p>Vous pourrez ici voir nos futurs évènements ainsi que les anciens. Cliquez sur les évènements afin d'avoir toutes les informations relative sur celle-ci.
+            Aussi pensez à commenter si vous le souhaiter, à liker et à participer à l'évènement si celui-ci vous interesse!</p>
+        <hr>
+    </div>
     <div id="evenement">
 
         <div class="future">

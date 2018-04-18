@@ -27,6 +27,21 @@ li .form-inline{
     padding-top: 12px;
 }
 
+.texte_acceuil{
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.texte_acceuil h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.texte_acceuil p {
+    font-size: 15px;
+   margin-left: 30px;
+    margin-right: 30px;
+}
+
+
 .future{
     margin: 20px 0 10px 20px;
     width: 66%;

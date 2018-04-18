@@ -12,6 +12,11 @@
 
     <div id="corps">
 
+        <div class="texte_idee">
+            <h2>Binevenue dans la partie boite à idée</h2>
+            <p>Vous pourrez ici voir les idées que vous avez proposées. Cliquez sur les idées afin d'avoir toutes les informations relative sur celle-ci.
+                Si cette idée vous plais, liker là afin que le DBE connaisse votre engouement</p>
+        </div>
 
         @foreach($idees as $idee)
             <article class="idee-post">

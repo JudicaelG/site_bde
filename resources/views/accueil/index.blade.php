@@ -11,6 +11,14 @@
 @endsection
 
 @section ('content')
+
+    <div class="texte_acceuil">
+        <h2>Bienvenue sur le site du BDE de l'eXia.Cesi Strasbourg</h2>
+        <p>Vous pourrez consulter nos divers évènements. N'hésitez pas à lacher un pouce bleu et interagir à nos évènements.
+            Nous sommes à votre écoute, n'hésitez pas à nous soumettre des idées d'évènements ou bien des idées qu'on pourra mettre en place!
+            Pensez à acheter des articles du BDE afin de soutenir et porter fièrement les couleurs de notre école!</p>
+        <hr>
+    </div>
     <div class="boite_idee">
         <h3>Boite à idée:</h3>
 

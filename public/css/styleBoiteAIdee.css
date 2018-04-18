@@ -1,4 +1,20 @@
 
+
+
+.texte_idee{
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.texte_idee h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.texte_idee p {
+    font-size: 15px;
+   margin-left: 30px;
+    margin-right: 30px;
+}
+
 #ajout_idee h3{
     text-align: center;
 }
