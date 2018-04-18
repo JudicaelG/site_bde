@@ -16,18 +16,18 @@ class ProduitController extends Controller
 					->join('images', 'produits.id', '=', 'images.id_produit')
 					->join('categorie_produits', 'produits.id_categorie', '=', 'categorie_produits.id')
 					->get();
-		$meilleurventes = DB::table('produits')
-							->distinct('contient_produits.id_produit')
-							->select(DB::raw("COUNT('contient_produits.id_produit') AS nombre"))
-							->join('contient_produits', 'produits.id', '=', 'contient_produits.id_produit')
-							->join('images', 'produits.id', '=', "images.id_produit")
-							->groupBy('contient_produits.id_produit')
-							->where('contient_produits.id_produit', '=', 'produits.id')							
+		
+		$meilleursproduits = DB::table('contient_produits')
+							->distinct()
+							->select(DB::raw('COUNT(contient_produits.id_produit) as total'))
+							->join('produits', 'contient_produits.id_produit', '=', 'produits.id')
+							->join('images', 'produits.id', '=', 'images.id_produit')							
+							->select('produits.titre', 'images.lien', 'images.alt')
 							->get();
 		
         return view('boutique.index')
 				->with(compact('produits', $produits))
-				->with(compact('meilleurventes', $meilleurventes));
+				->with(compact('meilleursproduits', $meilleursproduits));
 		
 		
 			
