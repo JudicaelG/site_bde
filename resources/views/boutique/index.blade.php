@@ -27,7 +27,7 @@
 			@foreach($meilleursproduits as $meilleurvente)
 				@if($meilleurvente->produit_count > 1)
 					<div class="produits">
-						<h4>{{ $meilleurvente->titre }}</h4>
+						<a href="/boutique/{{$meilleurvente->id}}">{{ $meilleurvente->titre }}</a>
 						<img src="{{$meilleurvente->lien}}" alt="{{ $meilleurvente->alt}}">
 					</div>
 				@endif
