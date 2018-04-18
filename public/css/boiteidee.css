@@ -1,7 +1,10 @@
-.blog-post{
+.idee-post{
     margin: 2% 5% 2% 5%;
-    /*background: #1c7430;
-*/}
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 50px;
+    float: left;
+}
 
 #imgBoiteidee{
     float: right;

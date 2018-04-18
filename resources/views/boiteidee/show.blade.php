@@ -13,13 +13,13 @@
 	
 	@bde
     <form action="{{url('boiteidee', [$idee->id])}}/edit" method="GET">
-        <input type="submit" class="btn btn-danger" value="Editer"/>
+        <input type="submit" class="btn btn-danger" value="Modifier"/>
     </form>
 
     <form action="{{url('boiteidee', [$idee->id])}}" method="POST">
         <input type="hidden" name="_method" value="Supprimer">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="submit" class="btn btn-danger" value="Delete"/>
+        <input type="submit" class="btn btn-danger" value="Supprimer"/>
     </form>
 
     <form method="POST" action="{{url('boiteidee', [$idee->id])}}/validation">

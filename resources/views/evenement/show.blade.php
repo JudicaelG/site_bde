@@ -17,13 +17,13 @@
     <div id="boutons">
 	@bde
         <form action="{{url('evenement', [$evenements->id])}}/edit" method="GET">
-            <input type="submit" class="btn btn-danger" value="Edit"/>
+            <input type="submit" class="btn btn-danger" value="Modifier"/>
         </form>
 
         <form action="{{url('evenement', [$evenements->id])}}" method="POST">
             <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Delete"/>
+            <input type="submit" class="btn btn-danger" value="Supprimer"/>
         </form>
 
         <form action="{{url('evenement', [$evenements->id])}}/pdf" method="GET">
@@ -158,7 +158,7 @@
                 <form method="POST" action="/evenement/{{$evenements->id}}/participe">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" value="Participe">Je participe, et j'ai un stage</button>
+                        <button type="submit" class="btn btn-primary" value="Participe">Je participe</button>
                     </div>
                 </form>
             @endif
@@ -168,7 +168,7 @@
             <form action="/evenement/aime/{{$evenements->id}}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet Evenement"/>
+                <input type="submit" class="btn btn-danger" value="Je n'aime pas cet évenement"/>
             </form>
 
         @endif
