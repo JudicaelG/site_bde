@@ -18,9 +18,9 @@ class CreateEvenementsTable extends Migration
             $table->integer('id')->autoIncrement();
 			$table->string('titre', 50);
 			$table->text('description');
-			$table->date('date_evenement');
-			$table->float('prix');
-			$table->string('recurrence', 50);
+			$table->date('date_evenement')->nullable();
+			$table->float('prix')->nullable();
+			$table->string('recurrence', 50)->nullable();
 			$table->integer('id_utilisateur');
             $table->timestamps();
 			
