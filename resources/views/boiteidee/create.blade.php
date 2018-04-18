@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Proposer une idée</title>
+
+@endsection
+
 @section ('header')
 
     <header>

@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Modifier un évènement</title>
+
+@endsection
+
 @section ('header')
 
     <header>

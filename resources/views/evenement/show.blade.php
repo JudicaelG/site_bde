@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Évènement</title>
+
+@endsection
+
 @section ('header')
 
     <header>
@@ -29,19 +35,19 @@
         <form action="{{url('evenement', [$evenements->id])}}/pdf" method="GET">
             <input type="hidden" name="_method" value="Recuperer la liste des partipants en pdf">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Recuperer la liste des partipants en pdf"/>
+            <input type="submit" class="btn btn-danger" value="Récupérer la liste des partipants en pdf"/>
         </form>
 
         <form action="{{url('evenement', [$evenements->id])}}/csv" method="GET">
             <input type="hidden" name="_method" value="Recuperer la liste des partipants en csv">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Recuperer la liste des partipants en csv"/>
+            <input type="submit" class="btn btn-danger" value="Récupérer la liste des partipants en csv"/>
         </form>
 	@endbde
 	@salarie
         <form action="{{url('evenement/contact', [$evenements-> id])}}" method="POST">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="btn btn-danger" value="Cet event peut nuire à l'image de l'école"/>
+            <input type="submit" class="btn btn-danger" value="Cet évènement peut nuire à l'image de l'école"/>
         </form>
 	@endsalarie
         @if(\Auth::check())
@@ -58,7 +64,7 @@
 	
     <div class="jumbotron text-center">
         <p>
-            <strong>Titre de l'événement:</strong> {{ $evenements->titre }}<br>
+            <strong>Titre de l'évènement:</strong> {{ $evenements->titre }}<br>
             <strong>Description:</strong> {{ $evenements->description }}<br>
             <strong>Date:</strong> {{ $evenements->date_evenement }}<br>
             <strong>Prix:</strong> {{ $evenements->prix }}<br>

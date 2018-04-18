@@ -1,6 +1,10 @@
 @extends('layouts.master')
 
+@section ('head')
 
+    <title>Bienvenue sur le site du BDE</title>
+
+@endsection
 
 @section ('header')
     <header>

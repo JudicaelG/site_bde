@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Boutique</title>
+
+@endsection
+
 @section ('header')
     <header>
         <div class="header_img">

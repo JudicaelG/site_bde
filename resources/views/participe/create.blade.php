@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Participer à un évènement</title>
+
+@endsection
+
 @section ('header')
 
     <header>
