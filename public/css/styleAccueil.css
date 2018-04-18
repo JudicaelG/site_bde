@@ -5,16 +5,23 @@
 }
 
 header{
-    background-color: #ff3a35;
-    height: 400px;
+    height: 388px;
     margin-top: -20px;
+}
+header img{
+    height: 388px;
+    width: 100%;
 }
 
 h1{
-    color: black;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    color: white!important;
+    text-align: center;
     font-family: helvetica;
     text-align: center;
-    padding-top: 100px;
     opacity: 0.9;
 }
 nav {

@@ -5,7 +5,11 @@
 @section ('header')
 
     <header>
-        <h1>Bienvenue sur le site du BDE</h1>
+        <div class="header_img">
+            <img src="../img/1440.png" alt="Smiley face" >
+            <h1>Bienvenue sur le site du BDE</h1>
+        </div>
+
     </header>
 
 @endsection
