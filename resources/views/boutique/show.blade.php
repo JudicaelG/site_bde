@@ -15,7 +15,9 @@
 
 <div id="boutonBoutique">
 	<a href="/boutique" class="fa fa-arrow-left"></a>
-	<a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+	@if(\Auth::check())
+		<a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+	@endif
 </div>
 
 <div class="jumbotron text-center">

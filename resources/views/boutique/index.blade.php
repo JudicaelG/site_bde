@@ -13,12 +13,12 @@
 @section ('content')
 
     <div id="boutonBoutique">
-        <a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
-    </div>
-    <div >
-        <div id="boutonBoutique">
+        @if(\Auth::check())
+            <a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+        @endif
+        @bde
             <a href="boutique/create">Ajouter un produit</a>
-        </div>
+        @endbde
     </div>
 
     <div id="meilleuresVentes">
@@ -33,7 +33,7 @@
 					</div>
 					@endif
 			@endforeach
-			
+            
         </div>
     </div>
 
