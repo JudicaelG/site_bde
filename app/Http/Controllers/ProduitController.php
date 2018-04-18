@@ -6,6 +6,7 @@ use App\Commande;
 use App\Contient_produit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Controller;
 use App\Produit;
 use App\Image;
@@ -62,6 +63,25 @@ class ProduitController extends Controller
 
         $produit->id_categorie = $idCategorie->id;
         $produit->save();
+
+
+        $images= DB::table('images')
+            ->select(DB::raw('count(id_produit) as produit_count '))
+            ->get();
+
+
+        /*$img = new Image();
+        $img->alt= request('titre');
+        $img->id_utilisateur= \Auth::user()->id;
+        $img->id_produit= $images;
+        if (Input::hasFile('image')){
+            $file=Input::file('image');
+            $file->move(public_path().'/img',$file->getClientOriginalName());
+
+            $img->lien = '/img/'.$file->getClientOriginalName();
+        }
+
+        $img->save();*/
 
         return redirect('/boutique');
 

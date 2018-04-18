@@ -58,9 +58,6 @@ Route::post('/commentaire/contact/{id}', 'AvertissementNuisanceController@commen
 
 Route::post('upload/{id}', 'UploadController@upload');
 
-//Route::get('file','ImageController@create');
-//Route::post('/images/store','ImageController@store');
-
 
 Route::get('evenement/{id}/pdf', 'PDFController@pdf');
 Route::get('evenement/{id}/csv', 'CSVController@csv');

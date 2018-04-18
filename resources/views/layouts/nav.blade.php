@@ -2,7 +2,7 @@
 
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="/accueil">Page d'accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/accueil">Accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="/evenement">Évènements <span class="sr-only">(current)</span></a>
