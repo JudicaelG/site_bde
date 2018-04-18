@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Produit;
+use App\Image;
 
 class ProduitController extends Controller
 {
@@ -16,11 +17,11 @@ class ProduitController extends Controller
 					->join('categorie_produits', 'produits.id_categorie', '=', 'categorie_produits.id')
 					->get();
 		$meilleurventes = DB::table('contient_produits')
-							->select(DB::raw('COUNT(contient_produits.id_produit) as nombre'))
+							->select(DB::raw("COUNT(contient_produits.id_produit) as nombre"))
 							->join('produits', 'contient_produits.id_produit', '=', 'produits.id')
 							->join('images', 'produits.id', '=', "images.id_produit")
 							->where('produits.id', '=', 'contient_produits.id_produit')
-							->groupby('contient_produits.id_produit')
+							->groupBy(DB::raw("contient_produits.id_produit"))
 							->get();
 		
         return view('boutique.index')
