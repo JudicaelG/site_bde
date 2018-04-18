@@ -13,6 +13,11 @@
 
 @section ('content')
 
+<div id="boutonBoutique">
+	<a href="/boutique" class="fa fa-arrow-left"></a>
+	<a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+</div>
+
 <div class="jumbotron text-center">
 	<p>
 		<h3>{{ $produits->titre }}</h3>

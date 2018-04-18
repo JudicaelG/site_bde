@@ -12,6 +12,10 @@
 
 @section ('content')
 
+    <div id="boutonBoutique">
+        <a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+    </div>
+
     <div id="meilleuresVentes">
         <p>Meilleures Ventes</p>
         <div class="imgMeilleuresVentes">
