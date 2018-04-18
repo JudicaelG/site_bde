@@ -2,13 +2,21 @@
 
 @section ('header')
 
-    <header>
-        <h1>Boutique</h1>
-    </header>
+	<header>
+		<div class="header_img">
+			<img src="/img/headerFond.png" alt="Image fond" >
+			<h1>Boutique</h1>
+		</div>
+	</header>
 
 @endsection
 
 @section ('content')
+
+<div id="boutonBoutique">
+	<a href="/boutique" class="fa fa-arrow-left"></a>
+	<a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+</div>
 
 <div class="jumbotron text-center">
 	<p>
@@ -18,11 +26,11 @@
 		<img src="{{ $images->lien }}" alt="{{ $images->alt }}">
 		<h5><strong>Prix : </strong>{{ $produits->prix }}</h5>
 	</p>
-	<form action="" method="post">
-		
-		<input type="hidden" name="id" value="{{ $produits->id }}">
-		<input type="hidden" name="titre" value="{{ $produits->titre }}">
-		<input type="hidden" name="prix" value="{{ $produits->prix }}">
+
+	<form action="/boutique" method="post">
+		{{csrf_field()}}
+		<input type="number" name="quantite" value="quantite">
+		<input type="hidden" name="id_produit" value="{{ $produits->id }}">
 		<button type="submit" class="btn btn-default">Ajouter au panier</button>
 	</form>
 </div>

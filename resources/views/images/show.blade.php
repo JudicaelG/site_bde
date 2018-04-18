@@ -3,14 +3,16 @@
 @section ('header')
 
     <header>
-        <h1>Images</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>BDE eXia.Cesi Strasbourg</h1>
+        </div>
     </header>
 
 @endsection
 
 @section ('content')
 
-    <h1>{{ $images->alt }}</h1>
 
     <img src="{{ $images->lien }}" alt="{{$images->alt}}">
     @bde

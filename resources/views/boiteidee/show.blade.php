@@ -3,13 +3,16 @@
 @section ('header')
 
     <header>
-        <h1>Boite à idée BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>{{ $idee->titre }}</h1>
+        </div>
     </header>
 
 @endsection
 
 @section ('content')
-    <h1> {{ $idee->titre }}</h1>
+
 	
 	@bde
     <form action="{{url('boiteidee', [$idee->id])}}/edit" method="GET">
@@ -17,7 +20,7 @@
     </form>
 
     <form action="{{url('boiteidee', [$idee->id])}}" method="POST">
-        <input type="hidden" name="_method" value="Supprimer">
+        <input type="hidden" name="_method" value="DELETE">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="submit" class="btn btn-danger" value="Supprimer"/>
     </form>

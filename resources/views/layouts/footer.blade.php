@@ -1,7 +1,7 @@
 <footer id="footer">
 
-        <div class="localisation"> Strasbourg <br> Allé des Foulons <br> 67000 </div>
-        <div class="copy"> Mentions légal <br> Copyright &copy; BDE ST eXia.Cesi.com <br> Droit réserver au groupe 3 </div>
+        <div class="localisation"> Strasbourg <br> Allé des Foulons <br> 67380 </div>
+        <div class="copy"> Mentions légales <br> Copyright &copy; BDE ST eXia.Cesi.com <br> Droits réservés au groupe 3 </div>
 
         <div class="reseau">
             <p> Réseaux sociaux</p>

@@ -50,7 +50,7 @@ class ImagesTableSeeder extends Seeder
             ]);
         DB::table('images')->insert(
             [
-                'lien' => '/img/tacos_cest_bon.jpeg',
+                'lien' => '/img/tacos.png',
                 'alt' => 'tacos',
                 'id_evenement' => '4',
                 'id_utilisateur' => '2',
@@ -102,5 +102,33 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/DonSang.jpg',
+                'alt' => 'Don de sang',
+                'id_evenement' => '1',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/manele.jpg',
+                'alt' => 'tacos',
+                'id_evenement' => '2',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        DB::table('images')->insert(
+            [
+                'lien' => '/img/pizza.png',
+                'alt' => 'tacos',
+                'id_evenement' => '5',
+                'id_utilisateur' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+
     }
 }

@@ -3,7 +3,10 @@
 @section ('header')
 
     <header>
-        <h1>Evenement</h1>
+        <div class="header_img">
+            <img src="../public/img/1440.png" alt="Image fond" >
+            <h1>Evènement</h1>
+        </div>
     </header>
 
 @endsection

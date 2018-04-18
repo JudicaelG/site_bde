@@ -3,14 +3,16 @@
 @section ('header')
 
     <header>
-        <h1>Évènement du BDE</h1>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>{{$evenements->titre}}</h1>
+        </div>
     </header>
 
 @endsection
 
 @section ('content')
 
-    <h1>Editer l'évènement</h1>
     <hr>
     <form action="{{url('evenement', [$evenements->id])}}" method="POST">
         <input type="hidden" name="_method" value="PUT" >

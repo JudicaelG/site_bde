@@ -3,13 +3,11 @@
 
 
 @section ('header')
-
     <header>
         <div class="header_img">
-            <img src="../img/1440.png" alt="Smiley face" >
-            <h1>Bienvenue sur le site du BDE</h1>
+            <img src="/img/headerFond.png" alt="Image Fond" >
+            <h1>BDE eXia.Cesi Strasbourg </h1>
         </div>
-
     </header>
 
 @endsection

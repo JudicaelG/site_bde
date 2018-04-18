@@ -13,6 +13,8 @@
     opacity: 0.9;
 }
 
+
+
 #meilleuresVentes{
     margin-top: 10px;
     padding-top: 10px;
@@ -55,4 +57,21 @@
     margin-left: 5%;
     margin-right: 5%;
     background: #dc3545;
+}
+
+#boutonBoutique a{
+    text-decoration: none;
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+    margin-left: 10px;
+}
+
+#boutonBoutique {
+    display: flex;
 }

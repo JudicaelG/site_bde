@@ -1,41 +1,46 @@
-<html lang="en">
-<head>
-    <title>Laravel Multiple File Upload Example</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container">
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+@extends('layouts.master')
+
+@section ('header')
+    <header>
+        <div class="header_img">
+            <img src="/img/headerFond.png" alt="Image fond" >
+            <h1>Upload fichier</h1>
         </div>
-    @endif
+    </header>
 
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
+@endsection
 
-    <h3 class="jumbotron">File Upload</h3>
-    <form method="post" action="{{URL::to('upload', [$id])}}" enctype="multipart/form-data">
-        {{csrf_field()}}
-        <label for="name">name</label>
-        <input type="text" name="name"><br>
-        <label for="image">image</label>
-        <input type="file" name="image">
-        <input type="hidden" name="_token" value="{{csrf_token()}}">
+@section ('content')
 
-        <input type="submit" class="btn btn-primary" style="margin-top:10px"></input>
+    <div class="container">
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    </form>
-</div>
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 
-</body>
-</html>
+        <h3 class="jumbotron">Upload d'image</h3>
+        <form method="post" action="{{URL::to('upload', [$id])}}" enctype="multipart/form-data">
+            {{csrf_field()}}
+            <label for="name">nom alternatif de l'image</label>
+            <input type="text" name="name"><br>
+            <label for="image">image:</label>
+            <input type="file" name="image">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+            <input type="submit" class="btn btn-primary" style="margin-top:10px"></input>
+
+        </form>
+    </div>
+@endsection
