@@ -25,7 +25,7 @@ class CommandesTableSeeder extends Seeder
             [
                 'prix_total' => '22.50',
                 'date_commande' => '2018-04-01',
-                'etat_commande' => 'En stock',
+                'etat_commande' => 'Valide',
                 'id_utilisateur' => '6',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -34,7 +34,7 @@ class CommandesTableSeeder extends Seeder
             [
                 'prix_total' => '25.00',
                 'date_commande' => '2018-03-15',
-                'etat_commande' => 'Recupéré',
+                'etat_commande' => 'Passe',
                 'id_utilisateur' => '5',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
