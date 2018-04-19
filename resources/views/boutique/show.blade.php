@@ -30,17 +30,15 @@
 </div>
 
 <div class="jumbotron text-center">
-	<p>
 		<h3>{{ $produits->titre }}</h3>
 		<br>
 		<strong>Description : </strong>{{ $produits->description}}<br>
 		<img src="{{ $images->lien }}" alt="{{ $images->alt }}">
 		<h5><strong>Prix : </strong>{{ $produits->prix }}</h5>
-	</p>
 
 	<form action="/boutique" method="post">
 		{{csrf_field()}}
-		<input type="number" name="quantite" value="quantite">
+		<input type="number" name="quantite" value="0" min="0">
 		<input type="hidden" name="id_produit" value="{{ $produits->id }}">
 		<button type="submit" class="btn btn-default">Ajouter au panier</button>
 	</form>
