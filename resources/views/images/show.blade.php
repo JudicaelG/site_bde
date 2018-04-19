@@ -19,8 +19,10 @@
 
 @section ('content')
 
+    <div class="eventImg">
+        <img  class="test" src="{{ $images->lien }}" alt="{{$images->alt}}">
+    </div>
 
-    <img src="{{ $images->lien }}" alt="{{$images->alt}}">
     @bde
     <form action="{{url('images', [$images->id])}}" method="POST">
         <input type="hidden" name="_method" value="DELETE">

@@ -110,3 +110,11 @@ li .form-inline{
         margin-top: 0px;
     }
 }
+
+.eventImg{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
