@@ -37,13 +37,14 @@
 		<strong>Description : </strong>{{ $produits->description}}<br>
 		<img src="{{ $images->lien }}" alt="{{ $images->alt }}">
 		<h5><strong>Prix : </strong>{{ $produits->prix }}</h5>
-
+	@if(\Auth::check())
 	<form action="/boutique" method="post">
 		{{csrf_field()}}
 		<input type="number" name="quantite" value="0" min="0">
 		<input type="hidden" name="id_produit" value="{{ $produits->id }}">
 		<button type="submit" class="btn btn-default">Ajouter au panier</button>
 	</form>
+	@endif
 </div>
 
 
