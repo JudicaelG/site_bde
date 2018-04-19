@@ -67,3 +67,5 @@ Route::get('evenement/{id}/pdf', 'PDFController@pdf');
 Route::get('evenement/{id}/csv', 'CSVController@csv');
 
 Route::post('produit/ajout', 'ProduitController@ajouterProduit');
+
+Route::post('boutique/recherche', 'ProduitController@recherche');

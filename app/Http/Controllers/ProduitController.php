@@ -222,6 +222,13 @@ class ProduitController extends Controller
         return view('boutique.indexValidation')
             ->with(compact('commandes'));
     }
+	
+	
+	public function recherche()
+	{
+		$idProduit = request('recherche');
+		return redirect('boutique/'.$idProduit);
+	}
 }
 
 

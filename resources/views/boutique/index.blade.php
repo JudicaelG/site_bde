@@ -16,6 +16,20 @@
 
 @endsection
 
+@section ('barre_recherche')
+
+	            <form class="form-inline my-2 my-md-0" action="/boutique/recherche" method="post">
+					{{csrf_field()}}
+                <select name="recherche" class="selectpicker" data-live-search="true">
+					@foreach($produits as $produit)
+					<option  value="{{$produit->id}}">{{ $produit->titre}}</option>
+					@endforeach
+				</select>
+
+            </form>
+
+@endsection
+
 @section ('content')
 
     <div id="boutonBoutique">
