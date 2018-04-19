@@ -50,3 +50,10 @@
     background: #dd4b39;
     color: white;
 }
+
+@media screen  and (max-width: 386px){
+    #footer{
+        height: 129px;
+    }
+
+}
