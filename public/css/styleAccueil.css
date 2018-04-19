@@ -108,6 +108,7 @@ li .form-inline{
 @media screen and (max-width: 768px) {
     nav ul a{
         margin-top: 0px;
+        margin-left: 10px;
     }
 }
 
