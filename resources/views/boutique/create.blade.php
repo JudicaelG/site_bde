@@ -21,7 +21,7 @@
 
     <div id="ajout_idee">
         <h3>Ajout d'un produit</h3>
-        <form method="POST" action="/produit/ajout" >
+        <form method="POST" action="/produit/ajout" enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="form-group">
                 <label for="titre">Nom du produit</label>

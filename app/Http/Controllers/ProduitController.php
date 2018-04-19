@@ -68,23 +68,19 @@ class ProduitController extends Controller
         $produit->save();
 
 
-        $images= DB::table('images')
-            ->select(DB::raw('count(id_produit) as produit_count '))
-            ->get();
 
-
-        /*$img = new Image();
+        $img = new Image();
         $img->alt= request('titre');
         $img->id_utilisateur= \Auth::user()->id;
-        $img->id_produit= $images;
+        $img->id_produit= $produit->id;
         if (Input::hasFile('image')){
             $file=Input::file('image');
-            $file->move(public_path().'/img',$file->getClientOriginalName());
+            $file->move(public_path().'/img/',$file->getClientOriginalName());
 
             $img->lien = '/img/'.$file->getClientOriginalName();
         }
 
-        $img->save();*/
+        $img->save();
 
         return redirect('/boutique');
 
