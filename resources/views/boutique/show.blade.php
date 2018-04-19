@@ -19,12 +19,14 @@
 
 @section ('content')
 
-<div id="boutonBoutique">
-	<a href="/boutique" class="fa fa-arrow-left"></a>
+<div id="boutique">
+	<div class="retourFa">
+		<a href="/boutique" class="fa fa-arrow-left"></a>
+	</div>
 	@if(\Auth::check())
 		<form action="/boutique/panier/" method="POST">
 			{{csrf_field()}}
-			<button type="submit" class="boutonBoutique" value="Mon Panier"><a class="fa fa-cart-plus"></a></button>
+			<button type="submit" class="boutonBoutique" value="Mon Panier"><a class="fa fa-cart-plus" style="font-size: 34px;"></a></button>
 		</form>
 	@endif
 </div>

@@ -72,16 +72,12 @@
     margin-left: 10px;
 }
 
-#boutonBoutique {
+#boutonBoutique, #boutique {
     display: flex;
 }
 
-#boutonBoutique button{
-    /*background: transparent;*/
-    border: none !important;
-}
 
-.boutonBoutique{
+ .validerCommande, .ajoutProduit{
     text-decoration: none;
     display: block;
     background-color: red;
@@ -92,4 +88,44 @@
     cursor: pointer;
     width: 180px;
     margin-left: 10px;
+}
+
+.boutonBoutique{
+    text-decoration: none;
+    display: block;
+    background-color: red;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+    height: 48px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+.boutonBoutique .fa{
+    margin-left: -20px;
+    margin-top: -2px;
+}
+
+.retourFa{
+    color: white;
+    font-size: 20px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color: red;
+    margin-left: 10px;
+    width: 50px;
+    height: 48px;
+}
+
+.retourFa .fa{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-left: -19px;
+    margin-top: -14px;
+    display: block;
+    font-size: 30px;
+
 }

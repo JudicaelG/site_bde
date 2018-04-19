@@ -36,15 +36,18 @@
         @if(\Auth::check())
             <form action="/boutique/panier/" method="POST">
                 {{csrf_field()}}
-                <button type="submit" class="boutonBoutique" value="Mon Panier"><i class="fa fa-cart-plus"></i></button>
+                <button type="submit" class="boutonBoutique" value="Mon Panier"><i class="fa fa-cart-plus" style="font-size:34px;"></i></button>
             </form>
         @endif
         @bde
             <form action="/boutique/validationcommande" method="POST">
                 {{csrf_field()}}
-                <button type="submit" class="boutonBoutique" value="Validation Commandes">Validation Commande</button>
+                <button type="submit" class="validerCommande" value="Validation Commandes">Validation Commande</button>
             </form>
-            <a href="boutique/create">Ajouter un produit</a>
+            <form action="boutique/create">
+                <button type="submit" class="ajoutProduit"> Ajouter un produit</button>
+            </form>
+
         @endbde
     </div>
 
