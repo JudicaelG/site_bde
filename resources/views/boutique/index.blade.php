@@ -22,7 +22,7 @@
 					{{csrf_field()}}
                 <select name="recherche" class="selectpicker" data-live-search="true">
 					@foreach($produits as $produit)
-					<option  value="{{$produit->id}}">{{ $produit->titre}}</option>
+					<option  value="{{$produit->id_produit}}">{{ $produit->titre}}</option>
 					@endforeach
 				</select>
 
