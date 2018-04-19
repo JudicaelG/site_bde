@@ -94,7 +94,7 @@
 
     <div id="meilleursArticlesBDE">
         <p>Meilleurs Produits BDE</p>
-        <div class="imgMeilleuresVentes">
+        <div class="produitDBE">
 			@foreach($produits as $produit)
             <div class="produits">
 				<h2 class="blog-post"><a href="/boutique/{{$produit->id_produit}}">{{ $produit->titre }}</a></h2>
