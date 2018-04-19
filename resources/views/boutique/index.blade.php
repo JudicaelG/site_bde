@@ -20,9 +20,16 @@
 
     <div id="boutonBoutique">
         @if(\Auth::check())
-            <a href="https://twitter.com/bdeexiastrg?lang=fr" class="fa fa-cart-plus"></a>
+            <form action="/boutique/panier/" method="POST">
+                {{csrf_field()}}
+                <button type="submit" class="boutonBoutique" value="Mon Panier"><i class="fa fa-cart-plus"></i></button>
+            </form>
         @endif
         @bde
+            <form action="/boutique/validationcommande" method="POST">
+                {{csrf_field()}}
+                <button type="submit" class="boutonBoutique" value="Validation Commandes">Validation Commande</button>
+            </form>
             <a href="boutique/create">Ajouter un produit</a>
         @endbde
     </div>

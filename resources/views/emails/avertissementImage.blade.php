@@ -4,6 +4,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Cette image peut nuire a l'image de l'école : {{$image->alt}}</h1>
+<h1>Cette image peut nuire à l'image de l'école : {{$image->alt}}.</h1>
 </body>
 </html>

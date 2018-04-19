@@ -14,6 +14,10 @@
 Route::get('/', 'AccueilController@index');
 
 Route::resource('boutique', 'ProduitController');
+Route::post('boutique/panier', 'ProduitController@voirPanier');
+Route::post('boutique/panier/passer', 'ProduitController@passerCommande');
+Route::post('boutique/panier/valider', 'ProduitController@validerCommande');
+Route::post('boutique/validationcommande', 'ProduitController@indexValidationCommande');
 
 Route::resource('accueil', 'AccueilController');
 Route::resource('evenement','EvenementController');
@@ -57,9 +61,6 @@ Route::post('/image/contact/{id}', 'AvertissementNuisanceController@image');
 Route::post('/commentaire/contact/{id}', 'AvertissementNuisanceController@commentaire');
 
 Route::post('upload/{id}', 'UploadController@upload');
-
-//Route::get('file','ImageController@create');
-//Route::post('/images/store','ImageController@store');
 
 
 Route::get('evenement/{id}/pdf', 'PDFController@pdf');

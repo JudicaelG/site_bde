@@ -75,3 +75,21 @@
 #boutonBoutique {
     display: flex;
 }
+
+#boutonBoutique button{
+    /*background: transparent;*/
+    border: none !important;
+}
+
+.boutonBoutique{
+    text-decoration: none;
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+    margin-left: 10px;
+}

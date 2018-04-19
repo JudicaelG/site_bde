@@ -44,6 +44,11 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="image">image:</label>
+                <input type="file" name="image">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+            </div>
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary">Valider</button>
             </div>
 
