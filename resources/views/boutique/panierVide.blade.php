@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section ('head')
+
+    <title>Panier</title>
+
+@endsection
+
 @section ('header')
 
     <header>

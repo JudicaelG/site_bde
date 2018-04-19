@@ -52,10 +52,7 @@ class EvenementController extends Controller
         $evenements = Evenement::find($id);
         $commentaires = Commentaire::where('id_evenement', $id)->get();
         $imageActive = Image::where('id_evenement', $id)->first();
-        $count = Image::where('id_evenement', $id)->count();
-        $skip = 1;
-        $limit = $count - $skip;
-        $images = Image::skip($skip)->take($limit)->get();
+        $images = Image::where('id_evenement', $id)->get();
         $dateDuJour = new \DateTime("now");
         $date = $dateDuJour->format("Y-m-d");
         if (\Auth::check()){
