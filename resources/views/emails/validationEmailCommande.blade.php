@@ -6,8 +6,8 @@
 <body>
 
 <p>
-    Votre commande N {{$commande->id}} a été validée.<br>
-    Répondez à ce mail pour définir un rdv avec un memebre de notre bureau.
+    Votre commande N° {{$commande->id}} a été validée.<br>
+    Répondez à ce mail pour définir un rdv avec un membre de notre bureau.
 </p>
 </ul>
 </body>
