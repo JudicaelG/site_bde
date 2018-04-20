@@ -36,6 +36,10 @@ class Aime_imageController extends Controller
      */
     public function store($id)
     {
+        /*
+         * On recupere l'id de l'image et de l'utilisateur  afin de savoir si il aime une image
+         */
+
         $aimeImage = new Aime_image();
         $aimeImage->id_image = $id;
         $aimeImage->id_utilisateur = \Auth::user()->id;
@@ -85,6 +89,9 @@ class Aime_imageController extends Controller
      */
     public function destroy($id)
     {
+        /*
+         * On supprime le like aproprié à la bonne personne
+         */
         $aimeImage = Aime_image::where('id_image', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
         return redirect('/images/'.$id);
     }

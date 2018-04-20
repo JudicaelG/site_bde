@@ -92,6 +92,9 @@ class AvertissementNuisanceController extends Controller
 
     public function evenement($id)
     {
+        /*
+         * On recupere l'event et l'id de l'utilisateur et on lui envoie un mail au bde pour le notifier
+         */
         $evenement = Evenement::findOrFail($id);
         $id_utilisateur = \Auth::user()->id;
         \Mail::to('bde@exiacesi.fr')->send(new AvertissementNuisanceEvenementEmail($evenement, $id_utilisateur));
@@ -100,6 +103,9 @@ class AvertissementNuisanceController extends Controller
 
     public function image($id)
     {
+        /*
+         * On recupere l'image et l'id de l'utilisateur et on lui envoie un mail au bde pour le notifier
+         */
         $image = Image::findOrFail($id);
         $id_utilisateur = \Auth::user()->id;
         \Mail::to('bde@exiacesi.fr')->send(new AvertissementNuisanceImageEmail($image, $id_utilisateur));
@@ -108,6 +114,9 @@ class AvertissementNuisanceController extends Controller
 
     public function commentaire($id)
     {
+        /*
+         * On recupere le commentaire et l'id de l'utilisateur et on lui envoie un mail au bde pour le notifier
+         */
         $commentaire = Commentaire::findOrFail($id);
         $id_utilisateur = \Auth::user()->id;
         \Mail::to('bde@exiacesi.fr')->send(new AvertissementNuisanceCommentaireEmail($commentaire, $id_utilisateur));

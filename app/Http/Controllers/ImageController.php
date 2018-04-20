@@ -82,6 +82,9 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
+        /*
+         * On supprime les images (et les commentaire et les likes associé à une image)
+         */
         $images = Image::findOrFail($id);
         $images->delete();
         $commentaires = Commentaire::where('id_image', $id)->delete();

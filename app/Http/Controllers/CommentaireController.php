@@ -11,6 +11,9 @@ class CommentaireController extends Controller
 {
     public function index()
     {
+        /*
+         * On récupère le commentaire
+         */
         $commentaire = Commentaire::get();
         return view('evenement.index', compact('evenements',$commentaire));
 
@@ -23,6 +26,10 @@ class CommentaireController extends Controller
 
     public function addCommentaire($id)
     {
+
+        /*
+         * On recupère le commenataire d'un event via des champs de saisi, l'id de l'utilisateur et l'id de l'event
+         */
         $commentaire = new Commentaire();
         $commentaire->contenu= request('contenu');
         $commentaire->id_utilisateur= \Auth::user()->id;
@@ -33,6 +40,9 @@ class CommentaireController extends Controller
     }
     public function addCommentaireImg($id)
     {
+        /*
+         * On recupère le commenataire d'une image via des champs de saisi, l'id de l'utilisateur et l'id de l'event
+         */
         $commentaire = new Commentaire();
         $commentaire->contenu= request('contenu');
         $commentaire->id_utilisateur= \Auth::user()->id;
@@ -59,6 +69,9 @@ class CommentaireController extends Controller
 
     public function destroy($id)
     {
+        /*
+         * On supprimer tout les commentaire qui appartienne a cet id
+         */
         $commentaire = Commentaire::findOrFail($id);
         $commentaire->delete();
         return back();

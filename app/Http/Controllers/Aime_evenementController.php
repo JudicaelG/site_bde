@@ -36,6 +36,9 @@ class Aime_evenementController extends Controller
      */
     public function store($id)
     {
+        /*
+         * On recupere l'id event et de l'utilisateur  afin de savoir si il aime un event
+         */
         $aimeEvenement = new Aime_evenement();
         $aimeEvenement->id_evenement = $id;
         $aimeEvenement->id_utilisateur = \Auth::user()->id;
@@ -85,6 +88,9 @@ class Aime_evenementController extends Controller
      */
     public function destroy($id)
     {
+        /*
+         * On supprime le like aproprié à la bonne personne
+         */
         $aimeEvenement = Aime_evenement::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
         return redirect('/evenement/'.$id);
     }

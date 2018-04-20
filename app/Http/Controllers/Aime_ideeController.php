@@ -36,6 +36,9 @@ class Aime_ideeController extends Controller
      */
     public function store($id)
     {
+        /*
+         * On recupere l'id de l'idee et de l'utilisateur  afin de savoir si il aime une idee
+         */
         $aimeIdee = new Aime_idee();
         $aimeIdee->id_boite_idee = $id;
         $aimeIdee->id_utilisateur = \Auth::user()->id;
@@ -85,6 +88,9 @@ class Aime_ideeController extends Controller
      */
     public function destroy($id)
     {
+        /*
+         * On supprime le like aproprié à la bonne personne
+         */
         $aimeIdee = Aime_idee::where('id_boite_idee', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
         return redirect('/boiteidee/'.$id);
     }

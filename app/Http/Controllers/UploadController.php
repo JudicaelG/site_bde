@@ -9,6 +9,11 @@ class UploadController extends Controller {
 
     public function upload($id){
 
+        /*
+         * On récupère les valeurs des input, de l'id de l'utilisateur et l'id de l'event
+         * On vérifie si le fichier est present dans la requete
+         * On place le fichier dans le bon repertoir avec le nom originel et dans la bdd
+         */
         $img = new Image();
         $img->alt= Input::get('name');
         $img->id_utilisateur= \Auth::user()->id;

@@ -37,6 +37,9 @@ class ParticipeController extends Controller
      */
     public function store($id)
     {
+        /*
+         * On récupere les id de l'event et de l'utilisateur
+         */
         $participe = new Participe();
         $participe->id_evenement = $id;
         $participe->id_utilisateur = \Auth::user()->id;
@@ -86,6 +89,9 @@ class ParticipeController extends Controller
      */
     public function destroy($id)
     {
+        /*
+         * On supprime les participants à un event
+         */
         $participes = Participe::where('id_evenement', $id)->where('id_utilisateur', \Auth::user()->id)->delete();
         return redirect('/evenement/'.$id);
     }

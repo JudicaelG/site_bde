@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Evenement extends Model
 {
+    /*
+    Champs de saisi obligatoire à remplir
+    */
     protected $fillable = [
         'description',
         'titre',

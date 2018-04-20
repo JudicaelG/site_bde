@@ -17,6 +17,9 @@ use App\Categorie_produit;
 
 class ProduitController extends Controller
 {
+    /*
+     * Affiche tout les produits à la boutique et fais la distinction de ceux qui sont le plus vue
+     */
     public function index()
     {
 		$produits = DB::table('produits')
@@ -57,6 +60,9 @@ class ProduitController extends Controller
         return view('boutique.create', compact('categories'));
     }
 
+    /*
+     * Fonction qui ajoute un produit dans la BDD
+     */
     public function ajouterProduit(){
 
         $produit = new Produit();
@@ -79,7 +85,9 @@ class ProduitController extends Controller
         $produit->save();
 
 
-
+        /*
+         * Permet d'upload un fichier
+         */
         $img = new Image();
         $img->alt= request('titre');
         $img->id_utilisateur= \Auth::user()->id;
@@ -99,6 +107,9 @@ class ProduitController extends Controller
 
 	public function show($id)
 	{
+	    /*
+	     * Fonction qui permet d'afficher un produit dans la boutique
+	     */
 		$produits = Produit::find($id);
 		$images = Image::where('id_produit', $id)->first();
 		
@@ -109,6 +120,9 @@ class ProduitController extends Controller
 
 	public function store()
     {
+        /*
+         * Fonction qui permet d'enregistrer une commande dans la BDD
+         */
         $commande = Commande::select('id','id_utilisateur','prix_total','date_commande','etat_commande','id_utilisateur')
             ->where('id_utilisateur', \Auth::user()->id)
             ->where('etat_commande', 'En commande')
@@ -169,6 +183,9 @@ class ProduitController extends Controller
         return back();
     }
 
+    /*
+     * Fonction qui permet de voir le panier avec les commandes
+     */
     public function voirPanier()
     {
         if(\Auth::check()) {
@@ -196,6 +213,9 @@ class ProduitController extends Controller
         }
     }
 
+    /*
+     * Fonction qui permet de valider la commande
+     */
     public function passerCommande()
     {
         $idCommande = request('id_commande');
@@ -210,6 +230,9 @@ class ProduitController extends Controller
         return redirect('boutique');
     }
 
+    /*
+     * Fonction qui permet de valider une commande
+     */
     public function validerCommande()
     {
         $idCommande = request('id_commande');
@@ -227,6 +250,9 @@ class ProduitController extends Controller
             ->with(compact('commandes'));
     }
 
+    /*
+     * Fonction qui permet de voir l'etat des commandes
+     */
     public function indexValidationCommande()
     {
         $commandes = Commande::get();
@@ -234,7 +260,9 @@ class ProduitController extends Controller
             ->with(compact('commandes'));
     }
 	
-	
+	/*
+	 * Autocompletion
+	 */
 	public function recherche()
 	{
 		$idProduit = request('recherche');

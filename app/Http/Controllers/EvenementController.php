@@ -15,6 +15,9 @@ class EvenementController extends Controller
 {
     public function index()
     {
+        /*
+         * Fonction qui permet de renvoyer a la vue tout les evenements
+         */
         $evenements = Evenement::get();
         $dateDuJour = new \DateTime("now");
         $date = $dateDuJour->format("Y-m-d");
@@ -28,6 +31,9 @@ class EvenementController extends Controller
 
     public function store()
     {
+        /*
+         * Fonction qui permet d'enregistrer dans la bDD un evenement
+         */
         $evenements = new Evenement();
         $this->validate(request(),[
             'titre' => 'required',
@@ -49,6 +55,9 @@ class EvenementController extends Controller
 
     public function show($id)
     {
+        /*
+         * Fonction qui permet d'afficher un evenement special
+         */
         $evenements = Evenement::find($id);
         $commentaires = Commentaire::where('id_evenement', $id)->get();
         $imageActive = Image::where('id_evenement', $id)->first();
@@ -72,12 +81,18 @@ class EvenementController extends Controller
 
     public function edit($id)
     {
+        /*
+         * Fonction qui permet de modifier un evenement
+         */
         $evenements = Evenement::find($id);
         return view('evenement.edit', compact('evenements'));
     }
 
     public function update(Request $request, $id)
     {
+        /*
+         * Fonction qui permet de mettre a jour un evenement
+         */
         $evenements = Evenement::findOrFail($id);
         $evenements->update($request->all());
         return redirect('evenement');
@@ -85,6 +100,9 @@ class EvenementController extends Controller
 
     public function destroy($id)
     {
+        /*
+         * Fonction qui permet de suprimer un evenement
+         */
         $evenements = Evenement::findOrFail($id);
         $evenements->delete();
         return redirect('evenement');

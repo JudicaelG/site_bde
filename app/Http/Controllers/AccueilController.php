@@ -11,6 +11,9 @@ class AccueilController extends Controller
 {
     public function index()
     {
+        /*
+         *
+         */
         $evenements = Evenement::get();
         $dateDuJour = new \DateTime("now");
         $date = $dateDuJour->format("Y-m-d");
